@@ -2752,6 +2752,16 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <tr><td>Console Surgeon</td><td>20 cases</td><td>30 in log; 20 with detailed evaluation + GEARS (&gt;50% procedure, score &gt;20)</td></tr>
 </table>`},
 
+{ id:'th-6', s:'s9', title:'Monthly Call Schedule', summary:'Live call schedule — updated from Google Sheets', content:`
+<div class="tip-box" id="call-last-updated">📅 Loading call schedule...</div>
+<div id="call-schedule-table"><div style="text-align:center;padding:30px;color:var(--muted)">⏳ Fetching schedule...</div></div>
+<p style="font-size:.78rem;color:var(--muted);margin-top:12px">Schedule is pulled live from Google Sheets. Last fetched time shown above. Works offline using last cached version.</p>`},
+
+{ id:'th-7', s:'s9', title:'Clinic Schedule', summary:'Live weekly clinic schedule — updated from Google Sheets', content:`
+<div class="tip-box" id="clinic-last-updated">📅 Loading clinic schedule...</div>
+<div id="clinic-schedule-table"><div style="text-align:center;padding:30px;color:var(--muted)">⏳ Fetching schedule...</div></div>
+<p style="font-size:.78rem;color:var(--muted);margin-top:12px">Schedule is pulled live from Google Sheets. Last fetched time shown above. Works offline using last cached version.</p>`},
+
 // ── SECTION 10: STUDY MATERIALS ──────────────────────────
 { id:'ts-1', s:'s9', title:'2-Year Reading Schedule', summary:'Williams OB + Williams GYN weekly reading plan', content:`
 <div class="tip-box">Based on the MSM OBGYN 2-Year Residency Reading Plan. Core texts: <strong>Williams Obstetrics (26th ed.)</strong> and <strong>Williams Gynecology (4th ed.)</strong>. Aim to complete 1–2 chapters per week alongside your rotation reading.</div>
@@ -2971,6 +2981,8 @@ function navigate(view, secId, topicId) {
   render();
   document.getElementById('app').scrollTop = 0;
   window.scrollTo(0,0);
+  if (topicId === 'th-6') loadSchedule('call');
+  if (topicId === 'th-7') loadSchedule('clinic');
 }
 
 function goSubtab(idx) {
@@ -3311,6 +3323,83 @@ function removeBookmark(id) {
   localStorage.setItem('obgyn_bm', JSON.stringify(bookmarks));
   render();
 }
+
+// ─────────────────────────────────────────────────────────
+// GOOGLE SHEETS SCHEDULE CONFIG
+// Paste your published CSV URLs here after setup
+// ─────────────────────────────────────────────────────────
+const SCHEDULE_SHEETS = {
+  call:   '', // ← paste Call Schedule CSV URL here
+  clinic: '', // ← paste Clinic Schedule CSV URL here
+};
+
+function parseCSV(text) {
+  return text.trim().split('\n').map(row => {
+    const cells = []; let cur = ''; let inQ = false;
+    for (let i = 0; i < row.length; i++) {
+      const c = row[i];
+      if (c === '"') { inQ = !inQ; }
+      else if (c === ',' && !inQ) { cells.push(cur.trim()); cur = ''; }
+      else { cur += c; }
+    }
+    cells.push(cur.trim());
+    return cells;
+  });
+}
+
+function csvToTable(rows) {
+  if (!rows || rows.length < 2) return '<p style="color:var(--muted)">No data in sheet.</p>';
+  const head = rows[0].map(h => `<th>${h}</th>`).join('');
+  const body = rows.slice(1).filter(r => r.some(c => c)).map(r =>
+    `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`
+  ).join('');
+  return `<div class="sched-wrap"><table><tr>${head}</tr>${body}</table></div>`;
+}
+
+async function loadSchedule(type) {
+  const url = SCHEDULE_SHEETS[type];
+  const tableEl = document.getElementById(type + '-schedule-table');
+  const infoEl  = document.getElementById(type + '-last-updated');
+  if (!tableEl) return;
+
+  const cacheKey = 'sched-' + type;
+  const cacheTS  = 'sched-ts-' + type;
+
+  if (!url) {
+    tableEl.innerHTML = `<div class="warn-box">📋 Schedule not connected yet.<br><br>Share your Google Sheet with the program coordinator and paste the CSV link into the app config.</div>`;
+    if (infoEl) infoEl.textContent = '📅 Not connected to Google Sheets yet';
+    return;
+  }
+
+  // Show cached version immediately while fetching
+  const cached = localStorage.getItem(cacheKey);
+  const cachedTS = localStorage.getItem(cacheTS);
+  if (cached) {
+    tableEl.innerHTML = csvToTable(parseCSV(cached));
+    if (infoEl && cachedTS) infoEl.textContent = '📅 Last updated: ' + new Date(+cachedTS).toLocaleString();
+  }
+
+  try {
+    const res = await fetch(url + '&t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    const rows = parseCSV(text);
+    tableEl.innerHTML = csvToTable(rows);
+    localStorage.setItem(cacheKey, text);
+    localStorage.setItem(cacheTS, Date.now());
+    if (infoEl) infoEl.textContent = '📅 Updated: ' + new Date().toLocaleString();
+  } catch(e) {
+    if (!cached) {
+      tableEl.innerHTML = `<div class="warn-box">⚠️ Could not load schedule. Check your internet connection.</div>`;
+      if (infoEl) infoEl.textContent = '📅 Unable to load — no cached version available';
+    } else {
+      if (infoEl) infoEl.textContent = '📅 Offline — showing cached version from ' + (cachedTS ? new Date(+cachedTS).toLocaleString() : 'earlier');
+    }
+  }
+}
+
+// Hook into render to trigger schedule fetches
+const _origRender = typeof render === 'function' ? render : null;
 
 // ─────────────────────────────────────────────────────────
 // INIT
