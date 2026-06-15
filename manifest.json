@@ -1,0 +1,25 @@
+{
+  "name": "Morehouse OB/GYN Intern Manual",
+  "short_name": "OB/GYN Manual",
+  "description": "Morehouse School of Medicine OB/GYN 2026–2027 Intern Manual",
+  "start_url": "/obgyn-manual/",
+  "scope": "/obgyn-manual/",
+  "display": "standalone",
+  "background_color": "#1a4f7a",
+  "theme_color": "#1a4f7a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
