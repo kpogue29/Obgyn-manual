@@ -1,4 +1,4 @@
-const CACHE = 'obgyn-guide-v8';
+const CACHE = 'obgyn-guide-v9';
 const BASE = '/Obgyn-manual';
 const ASSETS = [
   BASE + '/',
