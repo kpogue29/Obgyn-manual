@@ -1465,12 +1465,212 @@ const TOPICS = [
 <li>Close all charts before clinic ends</li>
 </ul>`},
 
-{ id:'t6-2', s:'s6', title:'Continuity Clinic', summary:'Epic context GHS OBGYN MH — OB patient info entry', content:`
-<p><strong>Epic Context:</strong> GHS OBGYN MH</p>
-<p>Required screen updates at each visit:</p>
+{ id:'t6-2', s:'s6', title:'Continuity Clinic', summary:'Approach to prenatal, postpartum, GYN, well-woman, AUB, menopause, CPP, and endometriosis visits', content:`
+<p><strong>Epic Context:</strong> GHS OBGYN MH &nbsp;|&nbsp; Update at every visit: face-sheet, education, problem list, lab tabs, medication reconciliation, DATING (OB patients)</p>
+
+<h3>Prenatal (Routine OB) Visit</h3>
+<table>
+<tr><th>GA</th><th>Key Actions / Labs / Counseling</th></tr>
+<tr><td><strong>Initial / New OB (any GA)</strong></td><td>Confirm dating (LMP vs. U/S), OB history, PMH/PSH, meds, allergies, social hx (IPV, substances, depression PHQ-9). Order: prenatal labs (CBC, blood type/screen, rubella, syphilis, HBsAg, HIV, UA/UCx, GC/Chl), 1st trimester US if not done, cfDNA or NT/PAPP-A if desired.</td></tr>
+<tr><td><strong>8–10 wks</strong></td><td>Dating U/S, prenatal labs, genetic counseling/cfDNA offer, review medications for teratogenicity, start prenatal vitamins + folic acid 400–800 mcg, start aspirin 81 mg if high-risk for preeclampsia</td></tr>
+<tr><td><strong>11–14 wks</strong></td><td>NT ultrasound + PAPP-A/free β-hCG (1st trimester screen); chorionic villus sampling (CVS) if indicated; review cfDNA results if sent</td></tr>
+<tr><td><strong>15–20 wks</strong></td><td>Quad screen (if not done cfDNA); amniocentesis if indicated; discuss anatomy scan</td></tr>
+<tr><td><strong>18–22 wks</strong></td><td>Anatomy scan; confirm placental location; discuss findings; Rh negative → RhoGAM at 28 wks</td></tr>
+<tr><td><strong>24–28 wks</strong></td><td>GDM screen (1hr 50g GCT); CBC (anemia screen); RhoGAM 300 mcg IM if Rh negative; review anatomy scan; fetal kick counts counseling; Tdap vaccination 27–36 wks</td></tr>
+<tr><td><strong>28–32 wks</strong></td><td>Review GCT results; if failed → 3hr 100g GTT; high-risk patients → begin antenatal testing (NST); growth U/S if indicated</td></tr>
+<tr><td><strong>35–37 wks</strong></td><td>GBS culture (vaginal/rectal swab); review birth plan; discuss IOL, epidural, breastfeeding; antenatal testing if indicated; confirm vertex presentation</td></tr>
+<tr><td><strong>38–40 wks</strong></td><td>Cervical exam (if patient consents); discuss elective IOL at 39 wks; NST if post-dates approaching; weekly visits</td></tr>
+<tr><td><strong>≥41 wks</strong></td><td>NST + AFI (BPP); discuss IOL strongly — offer by 41 0/7 wks per ACOG; membrane sweep if willing</td></tr>
+</table>
+<div class="tip-box">Every prenatal visit: BP, weight, urine dip, fundal height (after 20 wks), FHT, edema assessment, review labs/U/S since last visit, patient questions.</div>
+
+<h3>Postpartum Visit</h3>
 <ul>
-<li>Face-sheet, Education, Problem list, Lab tabs, Medication reconciliation, DATING</li>
-</ul>`},
+<li><strong>Timing:</strong> comprehensive visit at 6–8 wks; earlier visit (1–3 wks) for C/S patients, HTN, diabetes, mood concerns, or breastfeeding difficulties (ACOG 4th trimester initiative)</li>
+<li><strong>History:</strong> delivery details, complications (PPH, wound issues, mastitis, fever, DVT sx), breastfeeding status, lochia, resumption of menses, mood/sleep, support at home, infant wellbeing, return to work</li>
+<li><strong>Depression screening:</strong> Edinburgh Postnatal Depression Scale (EPDS) at 1–3 wks and 6–8 wks — score ≥10 warrants further evaluation; ≥13 likely depression — refer or prescribe (sertraline first-line — safe in breastfeeding)</li>
+<li><strong>Physical exam:</strong> BP, weight, incision (vaginal or abdominal), uterine involution, perineum/laceration healing, breast exam if breastfeeding</li>
+<li><strong>Labs:</strong> CBC if significant PPH; HbA1c or 2hr OGTT if GDM; TSH if thyroid disease</li>
+<li><strong>Contraception:</strong> discuss and initiate before discharge if possible — ovulation returns as early as 25 days postpartum</li>
+<li><strong>Immunizations:</strong> MMR or varicella if non-immune (not given in pregnancy); influenza; COVID booster; Tdap if not given antepartum</li>
+<li><strong>Counsel:</strong> pelvic floor exercises (Kegels), return to sex (usually 6 wks, when comfortable), return to exercise, weight loss goals, safe sleep for infant</li>
+</ul>
+
+<h3>Initial GYN Appointment</h3>
+<ul>
+<li><strong>History:</strong> CC, LMP, menstrual triad (frequency/duration/flow), menarche age, sexual activity, STI history, contraception history, Pap/HPV history, obstetric history, PMH/PSH/PSocHx/FamHx</li>
+<li><strong>Pap smear guidelines (USPSTF 2018):</strong>
+  <ul>
+    <li>Age &lt;21: no Pap regardless of sexual activity</li>
+    <li>21–29: Pap alone every 3 years</li>
+    <li>30–65: Pap + HPV co-test every 5 years (preferred) OR Pap alone every 3 years</li>
+    <li>&gt;65: discontinue if adequate prior negative screening and not high-risk</li>
+    <li>Post-hysterectomy (benign): discontinue vault Pap</li>
+  </ul>
+</li>
+<li><strong>STI screening:</strong> GC/Chl annually in all sexually active women ≤25 or older with risk factors; syphilis, HIV, Hep B/C per risk</li>
+<li><strong>Breast exam:</strong> clinical breast exam — assess for lumps, skin changes, nipple discharge; mammogram referral per guidelines (annual from 40 per ACOG; 50 per USPSTF)</li>
+<li><strong>Establish care, build rapport</strong> — document preferred name/pronouns, identify primary concerns, set goals for ongoing care</li>
+</ul>
+
+<h3>GYN Follow-Up Visit</h3>
+<ul>
+<li>Review reason for follow-up: abnormal Pap result, STI treatment response, contraception check-in, prior procedure follow-up, chronic condition management</li>
+<li>Abnormal Pap: review result → counsel per ASCCP guidelines → refer for colposcopy if indicated (see Colposcopy Clinic tab)</li>
+<li>Contraception follow-up: effectiveness, side effects, adherence, desire to change method</li>
+<li>STI follow-up: test of cure where indicated (gonorrhea), partner treatment confirmed, counseling on risk reduction</li>
+<li>Reassess and update problem list, medications, and preventive care at every visit</li>
+</ul>
+
+<h3>Well-Woman Exam / Annual Physical</h3>
+<table>
+<tr><th>Component</th><th>Details</th></tr>
+<tr><td><strong>Vitals</strong></td><td>BP, HR, weight, BMI, height</td></tr>
+<tr><td><strong>History update</strong></td><td>New medical problems, medications, allergies, family history changes, social history (IPV screen — HITS tool, substance use, tobacco), sexual history, reproductive plans</td></tr>
+<tr><td><strong>Depression / anxiety</strong></td><td>PHQ-2 screen (PHQ-9 if positive); GAD-2 for anxiety</td></tr>
+<tr><td><strong>Pap smear</strong></td><td>Per USPSTF guidelines above — not annually after age 21</td></tr>
+<tr><td><strong>STI screening</strong></td><td>GC/Chl if ≤25 or high risk; HIV per USPSTF (at least once, age 15–65); syphilis if risk factors</td></tr>
+<tr><td><strong>Breast exam / mammogram</strong></td><td>Clinical breast exam; mammogram referral per patient age and risk</td></tr>
+<tr><td><strong>Colorectal cancer screen</strong></td><td>Colonoscopy or FOBT/FIT starting age 45 (USPSTF 2021)</td></tr>
+<tr><td><strong>Bone density (DEXA)</strong></td><td>All women ≥65; or younger with FRAX-calculated 10-yr fracture risk ≥9.3%</td></tr>
+<tr><td><strong>Immunizations</strong></td><td>Influenza annually; COVID; Tdap × 1 (then Td q10 yrs); MMR/varicella if non-immune; HPV vaccine up to age 45 (shared decision-making 27–45); RSV ≥60; pneumococcal ≥65</td></tr>
+<tr><td><strong>Thyroid screen</strong></td><td>TSH if symptomatic or age &gt;60; not routine in asymptomatic young women</td></tr>
+<tr><td><strong>Lipid panel</strong></td><td>Universal screen by age 45 (earlier if risk factors: DM, HTN, FH of early CAD, smoking)</td></tr>
+<tr><td><strong>Diabetes screen</strong></td><td>HbA1c or fasting glucose — all adults 35–70 with overweight/obesity; earlier if additional risk factors</td></tr>
+<tr><td><strong>Folic acid counseling</strong></td><td>400–800 mcg daily for all women of reproductive age who could become pregnant</td></tr>
+</table>
+
+<h3>Abnormal Uterine Bleeding (AUB)</h3>
+<div class="tip-box">Use the <strong>PALM-COEIN</strong> classification (FIGO): Structural — Polyp, Adenomyosis, Leiomyoma, Malignancy; Non-structural — Coagulopathy, Ovulatory dysfunction, Endometrial, Iatrogenic, Not otherwise classified.</div>
+<table>
+<tr><th>Type</th><th>Definition</th></tr>
+<tr><td>Heavy Menstrual Bleeding (HMB)</td><td>Excessive flow — soaking ≥1 pad/tampon per hour, clots &gt;1 inch, or patient-defined bothersome heaviness</td></tr>
+<tr><td>Intermenstrual Bleeding (IMB)</td><td>Bleeding between periods — always warrants evaluation</td></tr>
+<tr><td>Irregular bleeding</td><td>Cycle length &lt;21 days or &gt;35 days, or unpredictable pattern</td></tr>
+<tr><td>Prolonged bleeding</td><td>Duration &gt;8 days per cycle</td></tr>
+</table>
+<h4>Workup</h4>
+<ul>
+<li><strong>History:</strong> onset, pattern, frequency, duration, flow quantification, associated pain, sexual activity, contraception use, medications (anticoagulants, hormonal), bleeding history (bruising, epistaxis — r/o coagulopathy)</li>
+<li><strong>Always rule out pregnancy first</strong> — UPT at every visit with AUB in reproductive-age patients</li>
+<li><strong>Labs:</strong> CBC (anemia from HMB), TSH (hypothyroidism → anovulatory AUB), prolactin (elevated → anovulation), coagulation studies if suspected coagulopathy (vWD screen: vWF antigen, activity, factor VIII), LH/FSH if anovulatory pattern, PAP smear if due</li>
+<li><strong>Pelvic U/S (TVUS):</strong> endometrial thickness, fibroids, polyps, adenomyosis (globular uterus, heterogeneous myometrium, cysts), ovarian pathology</li>
+<li><strong>Endometrial biopsy (EMB):</strong> indicated in women ≥45 with AUB; any age with risk factors for endometrial cancer (obesity, PCOS, unopposed estrogen, tamoxifen use, Lynch syndrome, DM)</li>
+<li><strong>Saline infusion sonography (SIS):</strong> better delineation of intracavitary lesions (polyps, submucosal fibroids) than standard TVUS</li>
+<li><strong>Hysteroscopy:</strong> gold standard for intracavitary pathology — diagnostic and therapeutic</li>
+</ul>
+<h4>Management by Cause</h4>
+<table>
+<tr><th>Cause</th><th>First-Line Treatment</th><th>Surgical Options</th></tr>
+<tr><td>Ovulatory dysfunction / anovulation (PCOS, hypothyroid, hyperprolactinemia)</td><td>Treat underlying cause; OCP or cyclic progestins to regulate cycle</td><td>Endometrial ablation if done with childbearing</td></tr>
+<tr><td>Endometrial polyp</td><td>Hysteroscopic polypectomy (definitive)</td><td>Hysteroscopic resection</td></tr>
+<tr><td>Submucosal fibroid (type 0/1/2)</td><td>LNG-IUD, tranexamic acid, NSAIDs; GnRH agonist for preoperative shrinkage</td><td>Hysteroscopic myomectomy; laparoscopic/open myomectomy if intramural; UAE; hysterectomy</td></tr>
+<tr><td>Coagulopathy (vWD)</td><td>Tranexamic acid, DDAVP (desmopressin) for vWD type 1, combined OCP</td><td>Endometrial ablation (if childbearing complete)</td></tr>
+<tr><td>Heavy menstrual bleeding (no structural cause)</td><td>LNG-IUD (Mirena) — reduces flow 90%; tranexamic acid 1.3g PO TID during menses; NSAIDs; combined OCP</td><td>Endometrial ablation; hysterectomy (definitive)</td></tr>
+<tr><td>Endometrial hyperplasia (without atypia)</td><td>Progestin therapy — LNG-IUD (preferred) or oral progestins; follow-up EMB in 3–6 months</td><td>Hysterectomy if atypia or failed medical management</td></tr>
+<tr><td>Endometrial cancer</td><td>Oncology referral — staging surgery (total hysterectomy + BSO + lymph node assessment)</td><td>Surgical staging</td></tr>
+</table>
+
+<h3>Postmenopausal Bleeding (PMB)</h3>
+<div class="danger-box">Postmenopausal bleeding = endometrial cancer until proven otherwise. Every patient requires evaluation — do not reassure without workup.</div>
+<ul>
+<li><strong>Definition:</strong> any vaginal bleeding &gt;12 months after last menstrual period in a postmenopausal woman</li>
+<li><strong>Endometrial cancer accounts for ~10% of PMB</strong> (most common cause is endometrial atrophy ~60–80%)</li>
+<li><strong>Workup:</strong>
+  <ul>
+    <li>TVUS — endometrial stripe (ES) ≤4 mm in postmenopausal woman has 99% NPV for cancer; ES &gt;4 mm or unable to measure → EMB</li>
+    <li>EMB — office-based; send to pathology. If inadequate sample → hysteroscopy + D&amp;C in OR</li>
+    <li>Hysteroscopy + D&amp;C — if office EMB inadequate, unsatisfactory, or patient cannot tolerate</li>
+  </ul>
+</li>
+<li><strong>Common causes:</strong> endometrial atrophy (most common), endometrial polyp, endometrial hyperplasia, HRT-related bleeding, endometrial cancer, cervical pathology</li>
+<li><strong>Management:</strong> based on pathology results. Atrophy → topical vaginal estrogen. Polyp → hysteroscopic resection. Hyperplasia without atypia → progestin therapy. Cancer → oncology referral.</li>
+</ul>
+
+<h3>Menopause</h3>
+<table>
+<tr><th>Stage</th><th>Definition</th></tr>
+<tr><td><strong>Perimenopause</strong></td><td>Irregular cycles, vasomotor symptoms, FSH variability — begins average age 47; lasts 4–8 years</td></tr>
+<tr><td><strong>Menopause</strong></td><td>12 months of amenorrhea without other cause — average age 51 in the US; diagnosis is clinical</td></tr>
+<tr><td><strong>Premature menopause (POI)</strong></td><td>Menopause before age 40 — workup: FSH, LH, estradiol, karyotype, autoimmune panel</td></tr>
+</table>
+<h4>Symptoms</h4>
+<ul>
+<li><strong>Vasomotor:</strong> hot flashes, night sweats (most bothersome; affect 75% of women)</li>
+<li><strong>GSM (Genitourinary Syndrome of Menopause):</strong> vaginal dryness, dyspareunia, urinary urgency/frequency/recurrent UTIs</li>
+<li><strong>Sleep disruption, mood changes, cognitive ("brain fog")</strong></li>
+<li><strong>Long-term:</strong> bone loss (osteoporosis), cardiovascular risk increase, metabolic changes</li>
+</ul>
+<h4>Management</h4>
+<table>
+<tr><th>Symptom</th><th>Non-hormonal</th><th>Hormonal (MHT)</th></tr>
+<tr><td>Vasomotor symptoms</td><td>CBT, hypnosis, SSRIs/SNRIs (paroxetine — only FDA-approved non-hormonal; venlafaxine, desvenlafaxine, escitalopram), gabapentin, fezolinetant (Veozah — NK3R antagonist, newest option), clonidine</td><td>Systemic estrogen ± progestogen — most effective treatment (85–90% reduction); use lowest effective dose for shortest necessary duration</td></tr>
+<tr><td>GSM / vaginal dryness</td><td>Vaginal lubricants (water/silicone-based) for intercourse; vaginal moisturizers (Replens) regularly</td><td>Low-dose topical vaginal estrogen (cream, ring, tablet/suppository) — minimal systemic absorption; safe even in most breast cancer patients per ACOG/NAMS</td></tr>
+<tr><td>Bone loss prevention</td><td>Calcium 1200 mg/day + Vit D 800–1000 IU/day; weight-bearing exercise; DEXA screening</td><td>MHT prevents bone loss; not first-line for osteoporosis alone — use bisphosphonates if primary indication</td></tr>
+</table>
+<h4>MHT (Menopausal Hormone Therapy) — Key Points</h4>
+<ul>
+<li><strong>Estrogen alone:</strong> for women with prior hysterectomy — no progestogen needed</li>
+<li><strong>Estrogen + progestogen:</strong> for women with intact uterus — progestogen protects against endometrial hyperplasia/cancer</li>
+<li><strong>Routes:</strong> oral, transdermal patch/gel/spray (lower VTE risk than oral), vaginal ring, pellet</li>
+<li><strong>Contraindications:</strong> unexplained vaginal bleeding (until evaluated), active breast cancer, active endometrial cancer, prior VTE/PE (relative — transdermal safer), active CAD/stroke, liver disease</li>
+<li><strong>WHI context:</strong> WHI study showed increased breast cancer risk with combined E+P (absolute risk: 8 extra cases/10,000 women/yr); no increased risk with E-alone. Current NAMS/ACOG guidance: MHT is safe and appropriate for healthy women &lt;60 or within 10 years of menopause onset ("timing hypothesis"). Risk-benefit discussion required.</li>
+</ul>
+
+<h3>Chronic Pelvic Pain (CPP)</h3>
+<div class="tip-box">CPP = pelvic pain lasting ≥6 months, non-cyclic or cyclic, significant enough to cause functional disability. Requires multidisciplinary approach.</div>
+<h4>Differential Diagnosis</h4>
+<table>
+<tr><th>GYN Causes</th><th>Non-GYN Causes</th></tr>
+<tr><td>Endometriosis (most common GYN cause), adenomyosis, uterine fibroids, ovarian cysts/remnant, PID/tubo-ovarian abscess, pelvic floor myalgia, vulvodynia, vestibulodynia, interstitial cystitis (overlap)</td><td>IBS (most common non-GYN), IBD, pelvic floor dysfunction, interstitial cystitis, painful bladder syndrome, musculoskeletal (SI joint, piriformis, psoas), depression/anxiety, abuse history, adhesions (post-surgical/infectious)</td></tr>
+</table>
+<h4>Workup</h4>
+<ul>
+<li>Detailed pain history: onset, character, location, radiation, timing (cyclic vs. constant), triggers (intercourse, defecation, urination, position), severity (VAS 0–10), prior treatments</li>
+<li>TVUS: fibroids, adnexal pathology, free fluid, endometrioma ("chocolate cyst" — ground-glass appearance)</li>
+<li>STI cultures (r/o PID)</li>
+<li>Urinalysis (r/o UTI, interstitial cystitis)</li>
+<li>Pelvic floor assessment — tender trigger points on levator ani, obturator, coccygeus muscles</li>
+<li>GI evaluation if bowel symptoms prominent (IBS, IBD)</li>
+<li><strong>Diagnostic laparoscopy</strong> — if medical management fails, or endometriosis strongly suspected</li>
+</ul>
+<h4>Management</h4>
+<ul>
+<li>NSAIDs (ibuprofen 600 mg TID or naproxen 500 mg BID scheduled — not PRN — during symptomatic period)</li>
+<li>Hormonal suppression: combined OCP (especially continuous cycling), LNG-IUD, DMPA, or GnRH agonist if endometriosis likely</li>
+<li>Pelvic floor physical therapy — for pelvic floor myalgia, vestibulodynia, vaginismus</li>
+<li>Tricyclic antidepressants (amitriptyline 10–75 mg at night) or SNRIs (duloxetine) for centralized pain</li>
+<li>Multidisciplinary referral: gastroenterology, urology, pain management, behavioral health, pelvic PT</li>
+<li>Surgical: laparoscopy for endometriosis excision, adhesiolysis, presacral neurectomy (selected cases)</li>
+</ul>
+
+<h3>Endometriosis</h3>
+<table>
+<tr><th>Feature</th><th>Details</th></tr>
+<tr><td><strong>Definition</strong></td><td>Endometrial glands and stroma outside the uterus — most common sites: ovaries, posterior cul-de-sac, uterosacral ligaments, peritoneum, rectovaginal septum</td></tr>
+<tr><td><strong>Classic triad</strong></td><td>Dysmenorrhea, dyspareunia, infertility</td></tr>
+<tr><td><strong>Other symptoms</strong></td><td>Chronic pelvic pain, dyschezia (painful defecation), cyclic rectal bleeding, cyclic hematuria (bladder involvement), fatigue</td></tr>
+<tr><td><strong>Diagnosis</strong></td><td>Definitive = laparoscopy with histologic confirmation. Clinical diagnosis acceptable to start medical treatment without surgery.</td></tr>
+<tr><td><strong>Staging (ASRM)</strong></td><td>Stage I (minimal) → Stage IV (severe/deep infiltrating); staging does not correlate well with pain severity</td></tr>
+</table>
+<h4>Medical Management</h4>
+<ul>
+<li><strong>First-line:</strong> NSAIDs + combined hormonal contraception (OCP, patch, ring) — suppresses menstruation, reduces retrograde flow</li>
+<li><strong>Continuous OCP</strong> (no placebo week) preferred over cyclic — eliminates monthly "flare"</li>
+<li><strong>LNG-IUD (Mirena):</strong> highly effective for dysmenorrhea and HMB — reduces endometrioma growth in some studies</li>
+<li><strong>DMPA (Depo-Provera):</strong> induces amenorrhea — effective for pain suppression</li>
+<li><strong>GnRH agonists (leuprolide/Lupron):</strong> induces pseudomenopause — very effective for pain. Use limited to 6 months without add-back therapy (progestin ± low-dose estrogen) due to bone density loss. Can extend with add-back.</li>
+<li><strong>GnRH antagonists (elagolix/Orilissa):</strong> oral; faster onset than agonists; FDA-approved for endometriosis pain; dose-dependent hypoestrogenic effects</li>
+<li><strong>Danazol:</strong> androgen derivative — effective but significant androgenic side effects (acne, hirsutism, voice deepening); rarely used now</li>
+</ul>
+<h4>Surgical Management</h4>
+<ul>
+<li><strong>Diagnostic + operative laparoscopy:</strong> excision preferred over ablation for deep lesions; excision provides tissue for histologic confirmation and better long-term pain relief</li>
+<li><strong>Ovarian endometrioma:</strong> cystectomy (stripping) preferred over drainage — lower recurrence rate; note: repeated ovarian surgery reduces ovarian reserve (AMH)</li>
+<li><strong>Definitive surgery:</strong> hysterectomy ± BSO — reserved for patients who have completed childbearing and failed medical/conservative surgical management. BSO reduces recurrence but causes surgical menopause.</li>
+<li><strong>Fertility:</strong> laparoscopic excision improves spontaneous conception rates for stage I/II; IVF for advanced disease or other infertility factors</li>
+</ul>
+<div class="tip-box">Endometriosis is a <strong>chronic, recurrent disease</strong> — not cured by surgery. Counsel patients that medical suppression after surgery reduces recurrence. Average diagnosis delay is 7–10 years — validate patient's symptoms and history.</div>`},
 
 { id:'t6-3', s:'s6', title:'Colposcopy Clinic', summary:'Step-by-step colposcopy procedure — Georgia Cancer Center Correll Bldg #4-9045', content:`
 <p><strong>Location:</strong> Georgia Cancer Center, Correll Bldg #4-9045 &nbsp;|&nbsp; <strong>Epic:</strong> GHS GYN Onc MH</p>
