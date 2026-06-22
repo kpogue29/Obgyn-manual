@@ -445,6 +445,21 @@ const TOPICS = [
 // ── SECTION 2: TRIAGE ────────────────────────────────────
 { id:'t2-1', s:'s2', title:'Initial Assessment', summary:'History checklist and triage check steps', content:`
 <div class="danger-box">All triage orders should be ordered STAT.</div>
+
+<h3>Triage Differential by Chief Complaint</h3>
+<table>
+<tr><th>Chief Complaint</th><th>Top Diagnoses to Rule Out First</th></tr>
+<tr><td>Vaginal bleeding</td><td>Placenta previa (U/S before exam), abruption, vasa previa, preterm labor</td></tr>
+<tr><td>Fluid leakage</td><td>PPROM, SROM — SSE before digital exam; r/o urinary incontinence</td></tr>
+<tr><td>Contractions / cramping</td><td>True labor, preterm labor, abruption, chorioamnionitis, UTI</td></tr>
+<tr><td>Decreased fetal movement</td><td>IUFD (U/S immediately), placental insufficiency, fetal sleep cycle</td></tr>
+<tr><td>Headache / visual changes</td><td>Preeclampsia with severe features, eclampsia — serial BPs Q15 min</td></tr>
+<tr><td>Abdominal pain</td><td>Preterm/term labor, abruption, preeclampsia (RUQ/epigastric), appendicitis, cholecystitis, round ligament pain</td></tr>
+<tr><td>N/V</td><td>HG/NVP, appendicitis, pyelonephritis, cholecystitis, pancreatitis, AFLP</td></tr>
+<tr><td>Trauma</td><td>Abruption, uterine rupture, feto-maternal hemorrhage — minimum 4h NST</td></tr>
+<tr><td>No fetal movement (U/S unavailable)</td><td>Treat as IUFD until proven otherwise — notify senior immediately</td></tr>
+</table>
+
 <h3>Pertinent History</h3>
 <ul>
 <li><strong>CC:</strong> Patient's own words</li>
@@ -478,143 +493,391 @@ const TOPICS = [
 </ul></div>`},
 
 { id:'t2-2', s:'s2', title:'No Prenatal Care', summary:'Management for patients presenting without prenatal care', content:`
+<h3>Differential — Conditions to Screen for at First Contact</h3>
+<table>
+<tr><th>Condition</th><th>Screen / Test</th><th>Why It Matters</th></tr>
+<tr><td><strong>Unknown / inaccurate dates</strong></td><td>U/S for EGA (CRL if &lt;14 wks; BPD/FL/HC/AC if later)</td><td>Gestational age drives all management decisions</td></tr>
+<tr><td><strong>Syphilis</strong></td><td>RPR</td><td>Congenital syphilis preventable with timely treatment</td></tr>
+<tr><td><strong>HIV</strong></td><td>HIV Ag/Ab combo</td><td>ART in labor dramatically reduces vertical transmission</td></tr>
+<tr><td><strong>Hepatitis B</strong></td><td>HBsAg</td><td>Neonatal HBV prophylaxis (HBIG + vaccine) within 12h of birth</td></tr>
+<tr><td><strong>GBS colonization</strong></td><td>GBS culture (or treat empirically if unknown at ≥37 wks)</td><td>Intrapartum prophylaxis prevents neonatal sepsis</td></tr>
+<tr><td><strong>Gestational diabetes</strong></td><td>50g GCT (or HbA1c if &gt;28 wks without prior screen)</td><td>Undiagnosed GDM → macrosomia, shoulder dystocia</td></tr>
+<tr><td><strong>Hypertensive disorders</strong></td><td>BP on arrival; urine protein if elevated</td><td>Undiagnosed preeclampsia / chronic HTN</td></tr>
+<tr><td><strong>Anemia</strong></td><td>CBC</td><td>Iron-deficiency anemia common; affects labor tolerance</td></tr>
+<tr><td><strong>Multiple gestation</strong></td><td>U/S</td><td>Changes delivery planning significantly</td></tr>
+<tr><td><strong>Malpresentation</strong></td><td>Leopold's + U/S</td><td>Undiagnosed breech at term requires urgent planning</td></tr>
+<tr><td><strong>Substance use</strong></td><td>UDS</td><td>NAS planning, social work, child protective services if needed</td></tr>
+</table>
+
 <h3>If Delivering or About to Deliver</h3>
-<p>Order all prenatal labs:</p>
+<p>Order all prenatal labs stat:</p>
 <ul>
-<li>Type and screen, CBC, HBV, RPR, Rubella, HIV</li>
+<li>Type &amp; screen, CBC, HBV surface antigen, RPR, Rubella IgG, HIV Ag/Ab</li>
 <li>Cultures: GC/Chl/GBS</li>
-<li>Urinalysis / Urine culture, UDS</li>
+<li>Urinalysis / urine culture, UDS</li>
+<li>Glucose (bedside or GCT if time allows)</li>
 </ul>
+
 <h3>Ultrasound Assessment</h3>
 <ul>
-<li>EGA, presentation, EFW, AFI, placental location/grade, # fetuses</li>
-<li>If term → add femur length</li>
-<li>Get official scan if possible</li>
+<li>EGA, presentation, EFW, AFI, placental location/grade, number of fetuses</li>
+<li>If term → add femur length for EFW</li>
+<li>Get official scan if possible; bedside confirms viability, presentation, FHR</li>
 </ul>
 <div class="tip-box">Referral / New OB Interview — ask the 4L clerk: (404) 616-4121</div>`},
 
 { id:'t2-3', s:'s2', title:'Decreased Fetal Movement', summary:'Assessment and management of reduced fetal movement', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>Fetal sleep cycle</strong></td><td>Normal — cycles last up to 40 min; most common cause of perceived DFM</td></tr>
+<tr><td><strong>Placental insufficiency / FGR</strong></td><td>SGA on U/S, abnormal Dopplers, chronic hypertension, DM</td></tr>
+<tr><td><strong>IUFD</strong></td><td>No cardiac activity on U/S — call resident immediately</td></tr>
+<tr><td><strong>Oligohydramnios</strong></td><td>AFI &lt;5 or MVP &lt;2; restricts fetal movement</td></tr>
+<tr><td><strong>Cord compromise</strong></td><td>Variable or late decels on NST, nonreassuring BPP</td></tr>
+<tr><td><strong>Maternal medications/sedation</strong></td><td>Opioids, benzodiazepines, MgSO4, alcohol — cross placenta and depress fetal CNS</td></tr>
+<tr><td><strong>Post-dates pregnancy</strong></td><td>≥41 wks — increased risk of placental dysfunction</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ul>
-<li>Notify resident immediately if no fetal cardiac activity → perform U/S immediately</li>
-<li>Adequate hx of last movement felt, associated Si/Sx</li>
-<li>BPP, acoustic stimulation (should have acceleration within seconds)</li>
-<li>Give kick count chart on discharge</li>
-<li>If strip reassuring and BPP WNL → reassure patient</li>
-<li>If term → consider IOL</li>
-</ul>`},
+<li><strong>History:</strong> last movement felt, pattern change, medications/substances, contractions, bleeding, ROM</li>
+<li><strong>NST</strong> — at least 20 min; reactive = 2 accels ≥15 bpm × 15 sec within 20 min (≥32 wks)</li>
+<li><strong>BPP</strong> if NST non-reactive — score ≤6/10 requires urgent evaluation</li>
+<li><strong>Acoustic stimulation</strong> (vibroacoustic) if NST non-reactive — acceleration expected within seconds</li>
+<li><strong>AFI</strong> on U/S — AFI &lt;5 = oligohydramnios, consider delivery if term</li>
+<li><strong>U/S for fetal cardiac activity</strong> if strip unobtainable or concern for IUFD</li>
+</ul>
+<ul>
+<li>If strip reassuring and BPP 8–10/10 → reassure, give kick count chart, follow up</li>
+<li>If term → consider IOL, especially with oligohydramnios or non-reactive NST</li>
+</ul>
+<div class="warn-box">No fetal cardiac activity on U/S → notify resident immediately. Do not leave patient alone.</div>`},
 
 { id:'t2-4', s:'s2', title:'Leakage of Fluid', summary:'Assessment for ruptured membranes', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>SROM (term)</strong></td><td>Sudden gush or steady leak; + nitrazine, ferning, pooling</td></tr>
+<tr><td><strong>PPROM</strong></td><td>Same findings &lt;37 wks — critical to distinguish; NO digital exam</td></tr>
+<tr><td><strong>Urinary incontinence</strong></td><td>Very common in pregnancy; urine odor, negative ferning/nitrazine</td></tr>
+<tr><td><strong>Increased vaginal discharge</strong></td><td>Leukorrhea of pregnancy — white/clear, no pooling, negative ferning</td></tr>
+<tr><td><strong>Cervical mucus / bloody show</strong></td><td>Pink-tinged mucus plug; no pooling, negative ferning</td></tr>
+<tr><td><strong>Vaginitis / infection</strong></td><td>Color, odor, discharge character; wet prep + cultures</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ul>
-<li>Onset, amount (trickling vs. gush), color, odor, contractions, bleeding, last intercourse</li>
-<li>Sterile speculum exam — <strong>DO NOT check digitally</strong> unless 100% sure patient is at term</li>
-<li>SSE: nitrazine, ferning, pooling on Valsalva, AFI</li>
-<li>Check OBServer or EPIC images for sono report</li>
+<li><strong>History:</strong> onset, amount (gush vs. trickle), color, odor, contractions, bleeding, last intercourse, GA</li>
+<li><strong>Sterile speculum exam</strong> — DO NOT perform digital exam until PPROM excluded</li>
+<li><strong>Nitrazine test</strong> — blue (pH &gt;6) = amniotic fluid (false + with blood, semen, BV)</li>
+<li><strong>Ferning</strong> — dried fluid on slide forms fern pattern; most specific for ROM</li>
+<li><strong>Pooling on Valsalva</strong> — fluid pooling in posterior fornix</li>
+<li><strong>AFI on U/S</strong> — oligohydramnios supports ROM; normal AFI does not exclude it</li>
+<li><strong>AmniSure / AmnioQuick</strong> (PAMG-1 or IGFBP-1) if clinical diagnosis uncertain</li>
+<li><strong>Cervical cultures</strong> (GC/Chl/GBS) if PPROM confirmed</li>
+<li>Check OBServer or EPIC for prior sonographic AFI</li>
 </ul>`},
 
 { id:'t2-5', s:'s2', title:'Preeclampsia', summary:'Diagnosis and management of preeclampsia', content:`
-<table><tr><th>Category</th><th>Criteria</th></tr>
-<tr><td>Mild</td><td>SBP &gt;140 or DBP &gt;90</td></tr>
-<tr><td>Severe</td><td>SBP &gt;160 or DBP &gt;110</td></tr>
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Distinguishing Features</th></tr>
+<tr><td><strong>Gestational hypertension</strong></td><td>BP ≥140/90 after 20 wks, NO proteinuria or severe features; resolves postpartum</td></tr>
+<tr><td><strong>Preeclampsia without severe features</strong></td><td>BP ≥140/90 + proteinuria ≥300 mg/24h or P:Cr ≥0.3 after 20 wks</td></tr>
+<tr><td><strong>Preeclampsia with severe features</strong></td><td>BP ≥160/110, thrombocytopenia &lt;100k, Cr &gt;1.1, transaminases 2× normal, pulmonary edema, new HA unresponsive to meds, visual changes</td></tr>
+<tr><td><strong>HELLP syndrome</strong></td><td>Hemolysis (LDH &gt;600, schistocytes), ELT (AST/ALT 2× normal), Low Platelets &lt;100k — may occur without hypertension</td></tr>
+<tr><td><strong>Chronic hypertension</strong></td><td>HTN diagnosed before 20 wks or pre-existing; watch for superimposed preeclampsia</td></tr>
+<tr><td><strong>Acute fatty liver of pregnancy (AFLP)</strong></td><td>Nausea, jaundice, hypoglycemia, coagulopathy, elevated bilirubin — overlap with HELLP; usually 3rd trimester</td></tr>
+<tr><td><strong>TTP / HUS</strong></td><td>Microangiopathic hemolysis + thrombocytopenia ± renal failure; often unrelated to pregnancy; ADAMTS13 &lt;10% for TTP</td></tr>
+<tr><td><strong>Eclampsia</strong></td><td>New-onset grand mal seizure in preeclampsia patient — treat with MgSO4 2–4g IV bolus</td></tr>
 </table>
+
+<h3>BP Classification</h3>
+<table>
+<tr><th>Category</th><th>Criteria</th></tr>
+<tr><td>Non-severe range</td><td>SBP 140–159 or DBP 90–109</td></tr>
+<tr><td>Severe range</td><td>SBP ≥160 or DBP ≥110 (treat within 30–60 min)</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ol>
-<li>S/S: HA, dizziness, scotomata, visual changes, RUQ pain</li>
-<li>Serial BP Q15 min × 1 hr</li>
-<li>Labs: CBC w/ platelets, Chem 14, protein urine total, creatinine urine total, uric acid, PT/PTT, D-dimer, fibrinogen, lactic acid</li>
-<li>Order BP Panel PRN for persistent severe range BPs</li>
+<li>Symptoms: HA, scotomata/visual changes, RUQ/epigastric pain, dyspnea, edema pattern</li>
+<li>Serial BP Q15 min × 1 hr to confirm persistent elevation</li>
+<li><strong>Labs:</strong> CBC w/ platelets, CMP (Cr, LFTs, glucose), uric acid, LDH, PT/PTT, D-dimer, fibrinogen, lactic acid</li>
+<li><strong>Urine:</strong> protein total + creatinine total (spot P:Cr ratio), or 24-hr urine collection</li>
+<li>NST / continuous fetal monitoring</li>
+<li>Order BP Panel PRN for persistent severe-range BPs (labetalol, hydralazine, or nifedipine)</li>
 <li>Ask yourself and your chief: <strong>does this patient need Magnesium?</strong></li>
-</ol>`},
+</ol>
+<div class="danger-box">Severe-range BP must be treated within 30–60 min to reduce risk of maternal stroke.</div>`},
 
 { id:'t2-6', s:'s2', title:'PPROM', summary:'Preterm premature rupture of membranes management', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>PPROM (confirmed)</strong></td><td>&lt;37 wks, + nitrazine/ferning/pooling or + AmniSure, low AFI</td></tr>
+<tr><td><strong>Urinary incontinence</strong></td><td>Negative ferning, urine odor, negative AmniSure</td></tr>
+<tr><td><strong>Increased vaginal discharge / leukorrhea</strong></td><td>White/clear, no pooling, negative tests</td></tr>
+<tr><td><strong>Intraamniotic infection (chorioamnionitis)</strong></td><td>Fever, uterine tenderness, maternal/fetal tachycardia, purulent discharge — may complicate PPROM</td></tr>
+<tr><td><strong>Cervical incompetence</strong></td><td>Painless dilation without contractions, bulging membranes — can lead to PPROM</td></tr>
+<tr><td><strong>Vaginitis (BV, trich)</strong></td><td>Can false-positive nitrazine; wet prep + cultures to differentiate</td></tr>
+</table>
+
+<h3>Standard Workup &amp; Management</h3>
 <ol>
-<li>R/O infection: cervical cultures (GC/Chl/GBS)</li>
-<li>SSE for nitrazine, ferning, pooling on Valsalva</li>
-<li>No digital exam; visualize cervical dilation with SSE</li>
-<li>U/S: presentation, EFW, AFI</li>
-<li>If confirmed: Betamethasone 12mg IM q24 × 2 doses OR Dexamethasone 6mg IM q12 × 4 doses</li>
-<li>Antibiotics: Ampicillin 2g IV q6h + Azithromycin (not Erythromycin at Grady) × 48h → Amoxicillin 250mg PO q8h + Erythromycin 500mg PO q12h × 5 days</li>
-<li>Tocolysis if contracting</li>
-<li>If &lt;32 wks and viable → Magnesium for neuroprotection</li>
+<li>Sterile speculum exam — nitrazine, ferning, pooling on Valsalva. <strong>No digital exam.</strong></li>
+<li>Cervical cultures: GC/Chl/GBS</li>
+<li>U/S: fetal presentation, EFW, AFI, placental location</li>
+<li>Labs: CBC, CRP, UA/UCx (r/o UTI contributing to contractions)</li>
+<li>Continuous fetal monitoring; watch for signs of chorioamnionitis (fever, FHR &gt;160, uterine tenderness)</li>
+<li>If confirmed PPROM: <strong>Betamethasone</strong> 12 mg IM q24h × 2 doses OR Dexamethasone 6 mg IM q12h × 4 doses (if &lt;34 wks)</li>
+<li><strong>Antibiotics:</strong> Ampicillin 2g IV q6h + Azithromycin (not Erythromycin at Grady) × 48h → Amoxicillin 250 mg PO q8h + Erythromycin 500 mg PO q12h × 5 days</li>
+<li>Tocolysis if actively contracting (discuss with senior)</li>
+<li>If &lt;32 wks and viable → <strong>Magnesium sulfate for neuroprotection</strong></li>
 <li>Consult Peds: 65500 then 20000</li>
-</ol>`},
+</ol>
+<div class="danger-box">Signs of chorioamnionitis (fever ≥38°C, uterine tenderness, maternal/fetal tachycardia, purulent discharge) → deliver regardless of gestational age.</div>`},
 
 { id:'t2-7', s:'s2', title:'Preterm Labor (<37 wks)', summary:'Assessment and tocolysis for preterm labor', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>True preterm labor</strong></td><td>Regular contractions + documented cervical change (dilation or effacement) &lt;37 wks</td></tr>
+<tr><td><strong>Braxton-Hicks contractions</strong></td><td>Irregular, no cervical change, resolve with hydration/rest</td></tr>
+<tr><td><strong>UTI / pyelonephritis</strong></td><td>UA positive, CVA tenderness, fever — uterine irritability without true labor</td></tr>
+<tr><td><strong>Cervical incompetence</strong></td><td>Painless dilation, no contractions, dilated os on exam — typically 16–24 wks</td></tr>
+<tr><td><strong>PPROM with contractions</strong></td><td>Fluid leak + contractions — check SSE before digital exam</td></tr>
+<tr><td><strong>Round ligament pain</strong></td><td>Sharp, unilateral, positional — no contractions on toco</td></tr>
+<tr><td><strong>Placental abruption</strong></td><td>Painful bleeding, uterine tenderness/rigidity, may cause uterine irritability</td></tr>
+<tr><td><strong>Polyhydramnios</strong></td><td>AFI &gt;24 — overdistension can trigger contractions</td></tr>
+</table>
+
+<h3>Standard Workup &amp; Management</h3>
 <ol>
-<li>Confirm dates</li>
-<li>SSE — fetal fibronectin if 24–34 wks GA (perform first); r/o infection (cervicitis, BV, trich, GC, Chl, GBS)</li>
-<li>Cervical exam if contracting</li>
-<li>U/S (EFW), presentation</li>
-<li>IVF hydration: 1000mL bolus D5LR; if contractions continue → terbutaline 0.25mg SQ × 3 (hold if pulse &gt;120)</li>
-<li>Consider steroids for lung maturity</li>
-<li>Consider therapeutic pelvic rest (discuss with senior)</li>
+<li>Confirm dates (LMP, first-trimester U/S)</li>
+<li>SSE — fetal fibronectin (FFN) if 24–34 wks (collect <strong>before</strong> digital exam or any vaginal manipulation)</li>
+<li>R/O infection: GC/Chl/GBS cultures, BV/trich wet prep, UA/UCx</li>
+<li>Cervical exam — document dilation, effacement, station, consistency</li>
+<li>Cervical length by TVUS if available — CL &lt;20 mm is high risk</li>
+<li>U/S: EFW, fetal presentation, AFI, placental location</li>
+<li>Labs: CBC, CMP, UA</li>
+<li>IVF hydration: 1000 mL bolus D5LR; if contractions persist → terbutaline 0.25 mg SQ q20–30 min × 3 (hold if pulse &gt;120)</li>
+<li>If 24–34 wks with likely delivery within 7 days: <strong>Betamethasone</strong> 12 mg IM q24h × 2 doses</li>
+<li>If &lt;32 wks: <strong>Magnesium sulfate</strong> for fetal neuroprotection</li>
 <li>Consult Peds: 65500 then 20000</li>
-</ol>`},
+</ol>
+<div class="tip-box">FFN &lt;50 ng/mL has high NPV — delivery within 2 weeks unlikely. Helps guide admission decisions.</div>`},
 
 { id:'t2-8', s:'s2', title:'Term R/O Labor (>37 wks)', summary:'Evaluation of term patients presenting with possible labor', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>True (active) labor</strong></td><td>Regular contractions Q3–5 min + progressive cervical change (dilation ≥1 cm/hr active phase)</td></tr>
+<tr><td><strong>Latent labor</strong></td><td>Irregular contractions, slow or minimal cervical change — may take hours; admit if ≥6 cm or ROM</td></tr>
+<tr><td><strong>Braxton-Hicks / false labor</strong></td><td>Irregular, no cervical change over 1–2h observation; resolve with walking or rest</td></tr>
+<tr><td><strong>SROM</strong></td><td>Gush or trickle of fluid — SSE for nitrazine/ferning before digital exam</td></tr>
+<tr><td><strong>Bloody show</strong></td><td>Pink/blood-tinged mucus plug — normal sign of impending labor; no intervention needed</td></tr>
+<tr><td><strong>Chorioamnionitis</strong></td><td>Fever, maternal/fetal tachycardia, uterine tenderness, purulent discharge</td></tr>
+<tr><td><strong>Non-reassuring fetal status</strong></td><td>Decelerations, prolonged bradycardia, loss of variability on strip — may present as "feeling something's wrong"</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ol>
-<li>Adequate hx: onset, frequency, duration; vaginal bleeding, fetal movement, ROM</li>
-<li>Document serial cervical exams</li>
-<li>Obtain Bishop score</li>
-<li>Reasons to keep patient: contractions Q3–4, non-reassuring fetal strip, oligo</li>
-<li>Get BPP</li>
-<li>SROM → SSE for + nitrazine, ferning, pooling/Valsalva</li>
-</ol>`},
+<li><strong>History:</strong> contraction onset, frequency, duration, intensity; fetal movement, bleeding, fluid leakage, last intercourse</li>
+<li><strong>NST</strong> — continuous monitoring; assess FHR pattern, variability, accelerations, decelerations</li>
+<li><strong>Serial cervical exams</strong> Q1–2h — document dilation, effacement, station, consistency, position</li>
+<li><strong>Bishop score</strong> — guides IOL favorability (score ≥8 = favorable)</li>
+<li>If ROM suspected: SSE for nitrazine, ferning, pooling (before digital exam)</li>
+<li><strong>BPP</strong> if NST non-reactive or concern for fetal compromise</li>
+<li><strong>AFI</strong> — oligohydramnios (AFI &lt;5) = indication to keep patient</li>
+</ol>
+<div class="tip-box"><strong>Admit if:</strong> contractions Q3–4 min, ROM, non-reassuring strip, oligohydramnios, or cervical change on serial exams.</div>`},
 
 { id:'t2-9', s:'s2', title:'Vaginal Bleeding', summary:'Assessment and management of antepartum hemorrhage', content:`
-<div class="danger-box">NO bimanual or speculum exam before U/S to rule out previa!</div>
+<div class="danger-box">NO bimanual or speculum exam before U/S to rule out placenta previa!</div>
+
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>Placenta previa</strong></td><td>Painless bright-red bleeding; placenta covers or is near internal os on U/S — DO NOT do vaginal exam</td></tr>
+<tr><td><strong>Placental abruption</strong></td><td>Painful bleeding + uterine rigidity/tenderness; may be concealed (no visible blood); FHR abnormalities</td></tr>
+<tr><td><strong>Vasa previa</strong></td><td>Fetal vessel over cervical os; painless bleeding at ROM + immediate fetal bradycardia; Apt test + for fetal blood</td></tr>
+<tr><td><strong>Bloody show / mucus plug</strong></td><td>Pink-tinged mucus, small volume, near-term; benign</td></tr>
+<tr><td><strong>Cervical lesion / polyp</strong></td><td>Spotting after intercourse; visible on speculum (only after previa excluded)</td></tr>
+<tr><td><strong>Cervicitis / vaginitis</strong></td><td>Associated discharge, odor; cultures positive</td></tr>
+<tr><td><strong>Uterine rupture</strong></td><td>Sudden abdominal pain + bleeding + fetal distress in TOLAC/prior uterine surgery patient — surgical emergency</td></tr>
+<tr><td><strong>Subchorionic hemorrhage</strong></td><td>Often incidental on U/S; spotting/light bleeding; usually self-limited</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ol>
-<li>Vital signs</li>
-<li>Adequate hx: onset, quantity, duration, associated pain/discharge, last intercourse, ROM</li>
-<li>Labs: CBC w/ platelets, PT/PTT, D-dimer, fibrinogen, type and screen</li>
-</ol>`},
+<li><strong>Vital signs</strong> — hemodynamic stability first; large-bore IV access if heavy bleeding</li>
+<li><strong>History:</strong> onset, quantity (pads/hr), color (bright vs. dark), pain, trauma, intercourse, contractions, ROM, placental location from prior U/S</li>
+<li><strong>U/S first</strong> — placental location, fetal presentation, FHR, AFI before any vaginal exam</li>
+<li><strong>NST / continuous fetal monitoring</strong></li>
+<li><strong>Labs:</strong> CBC w/ platelets, PT/PTT, D-dimer, fibrinogen, type &amp; screen (cross-match if significant bleeding)</li>
+<li>Rh status — RhoGAM if Rh negative</li>
+<li>If vasa previa suspected: Apt test (NaOH added to blood — fetal Hgb resists alkali denaturation; stays pink)</li>
+</ol>
+<div class="warn-box">Abruption can be concealed — heavy bleeding may not be visible. Maintain high suspicion with uterine rigidity, pain, and FHR abnormalities even without external bleeding.</div>`},
 
 { id:'t2-10', s:'s2', title:'Abdominal Trauma', summary:'Management of trauma in pregnancy', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>Placental abruption</strong></td><td>Most feared complication; can occur with even minor trauma; may be delayed 24–48h; uterine rigidity, bleeding, FHR abnormalities</td></tr>
+<tr><td><strong>Uterine rupture</strong></td><td>Sudden severe pain, loss of uterine contour, fetal parts palpable abdominally; prior uterine scar is risk factor</td></tr>
+<tr><td><strong>Preterm labor</strong></td><td>Contractions after trauma — even minor trauma can trigger PTL</td></tr>
+<tr><td><strong>Feto-maternal hemorrhage</strong></td><td>Kleihauer-Betke positive; may cause fetal anemia or hydrops; Rh-negative patients at risk for sensitization</td></tr>
+<tr><td><strong>Direct fetal injury</strong></td><td>Rare unless penetrating trauma; fetal skull fracture, intracranial hemorrhage</td></tr>
+<tr><td><strong>Intraabdominal injury (maternal)</strong></td><td>Splenic laceration most common solid organ injury in pregnancy; diaphragm elevation alters injury patterns</td></tr>
+<tr><td><strong>Bladder / urethral injury</strong></td><td>Hematuria after blunt trauma or pelvic fracture</td></tr>
+</table>
+
+<h3>Standard Workup</h3>
 <ol>
-<li>ABC — stabilize patient</li>
-<li>Labs: CBC, type and screen, PT/PTT, fibrinogen, D-dimer, KB test (if &gt;12 wks)</li>
-<li>NST for at least 4 hours</li>
-<li>Patients with abd pain, vag bleeding, UC, non-reassuring strip (viable &gt;20 wks) → consider 24hr observation (steroids if &lt;34 wks)</li>
-<li>Consider Rhogam if Rh neg and KB test positive</li>
+<li><strong>ABCs first</strong> — left lateral decubitus positioning to relieve aortocaval compression; two large-bore IVs</li>
+<li>Trauma surgery consult for significant mechanism; OB manages fetal monitoring</li>
+<li><strong>Labs:</strong> CBC, type &amp; screen (cross-match if significant), PT/PTT, fibrinogen, D-dimer, <strong>Kleihauer-Betke (KB) test</strong> (if &gt;12 wks — detects fetal cells in maternal circulation)</li>
+<li><strong>U/S (FAST exam + obstetric)</strong> — fetal cardiac activity, placental location/appearance, AFI, free fluid</li>
+<li><strong>NST minimum 4 hours</strong> (extend to 24h if contractions, pain, bleeding, or non-reassuring strip)</li>
+<li>If uterine contractions, vaginal bleeding, or non-reassuring strip with viable fetus (&gt;20 wks) → 24h observation; give <strong>steroids if &lt;34 wks</strong></li>
+<li><strong>RhoGAM</strong> if Rh-negative and KB test positive (dose based on KB result — standard 300 mcg covers up to 30 mL fetal blood)</li>
 </ol>
-<div class="danger-box"><strong>Remember ABRUPTION!</strong> → obtain U/S (ideally official) for placental evaluation</div>`},
+<div class="danger-box"><strong>ABRUPTION</strong> — obtain official U/S for placental evaluation. Abruption can occur hours after trauma with initially normal presentation. Monitor 4–24h.</div>`},
 
 { id:'t2-11', s:'s2', title:'IUFD', summary:'Intrauterine fetal demise — workup and management', content:`
-<h3>At Admission</h3>
+<h3>Differential Diagnosis / Etiology</h3>
+<table>
+<tr><th>Cause</th><th>Clues / Workup</th></tr>
+<tr><td><strong>Placental insufficiency / abruption</strong></td><td>Most common; SGA, HTN, DM, abnormal Dopplers; pathology of placenta</td></tr>
+<tr><td><strong>Chromosomal / structural anomaly</strong></td><td>Fetal karyotype (amnio before delivery); dysmorphic features on exam</td></tr>
+<tr><td><strong>Infection</strong></td><td>Parvovirus B19 (IgG/IgM), CMV, toxoplasma, syphilis (RPR), Listeria — placental cultures</td></tr>
+<tr><td><strong>Cord accident</strong></td><td>Cord prolapse, true knot, nuchal cord × multiple — pathology/autopsy</td></tr>
+<tr><td><strong>Thrombophilia</strong></td><td>Antiphospholipid syndrome (lupus anticoag, anticardiolipin Ab, anti-β2-glycoprotein), Factor V Leiden, prothrombin gene mutation, antithrombin III deficiency, Protein C/S deficiency</td></tr>
+<tr><td><strong>Maternal disease</strong></td><td>Uncontrolled DM, SLE, thyroid disease (TSH), AFLP, HELLP</td></tr>
+<tr><td><strong>Feto-maternal hemorrhage</strong></td><td>KB test positive with large fetal bleed; may be spontaneous</td></tr>
+<tr><td><strong>Trauma</strong></td><td>MVA, IPV — KB test, social history</td></tr>
+<tr><td><strong>Unexplained (~25%)</strong></td><td>Diagnosis of exclusion after full workup</td></tr>
+</table>
+
+<h3>At Admission — Workup</h3>
 <ul>
-<li>Labs: CBC, KB test, human parvovirus B19 IgG/IgM, RPR, lupus anticoag, anticardiolipin ab, TSH; selected: Factor V Leiden, prothrombin gene mutation, antithrombin III, fasting homocysteine, fetal karyotype (amniocentesis before delivery)</li>
+<li><strong>Labs:</strong> CBC, KB test, parvovirus B19 IgG/IgM, RPR, lupus anticoagulant, anticardiolipin Ab, anti-β2-glycoprotein I Ab, TSH</li>
+<li><strong>Selected thrombophilia panel:</strong> Factor V Leiden, prothrombin gene mutation, antithrombin III activity, fasting homocysteine</li>
+<li><strong>Fetal karyotype</strong> — amniocentesis before delivery (highest yield while cells viable)</li>
+<li>U/S confirmation of demise; document GA, EFW, anomalies, placenta, AFI</li>
 </ul>
+
 <h3>Delivery</h3>
 <ul>
-<li>Encourage fetal autopsy; if declined → external evaluation by perinatal pathologist or tissue sampling</li>
-<li>Send placenta to pathology; swab for culture</li>
+<li>Encourage <strong>fetal autopsy</strong> — identifies cause in up to 40% of cases; if declined → external evaluation by perinatal pathologist or tissue sampling</li>
+<li>Send <strong>placenta to pathology</strong>; swab placenta/membranes for culture</li>
+<li>Photograph any dysmorphic features (with consent)</li>
 </ul>
+
 <h3>Follow-up</h3>
 <ul>
-<li>Rhogam if needed</li>
-<li>Protein S/C activity; parental karyotype if indicated</li>
-<li>Offer chaplain services</li>
+<li>RhoGAM if Rh-negative</li>
+<li>Protein S/C activity (check 6+ weeks postpartum — levels low in pregnancy/acute illness)</li>
+<li>Parental karyotype if fetal anomaly or recurrent loss</li>
+<li>Offer chaplain, social work, grief counseling, bereavement resources</li>
 </ul>`},
 
 { id:'t2-12', s:'s2', title:'Induction of Labor', summary:'Checklist for IOL admission and preparation', content:`
+<h3>Indications for IOL (Common)</h3>
+<table>
+<tr><th>Indication</th><th>Typical Timing</th></tr>
+<tr><td>Post-dates (elective)</td><td>≥39 wks (ARRIVE trial)</td></tr>
+<tr><td>Post-dates (indicated)</td><td>≥41 0/7 wks</td></tr>
+<tr><td>Gestational hypertension / preeclampsia without severe features</td><td>37 0/7 wks</td></tr>
+<tr><td>Preeclampsia with severe features</td><td>≥34 wks (often deliver sooner)</td></tr>
+<tr><td>Gestational diabetes (diet-controlled)</td><td>39–40 wks</td></tr>
+<tr><td>Gestational diabetes (insulin-dependent)</td><td>38–39 wks</td></tr>
+<tr><td>PPROM at term</td><td>Upon confirmation</td></tr>
+<tr><td>Oligohydramnios (AFI &lt;5)</td><td>≥36–37 wks depending on context</td></tr>
+<tr><td>IUFD</td><td>After workup, when patient ready</td></tr>
+<tr><td>Cholestasis of pregnancy</td><td>36–37 wks</td></tr>
+<tr><td>FGR with abnormal Dopplers</td><td>Individualized per MFM</td></tr>
+</table>
+
+<h3>Contraindications to IOL</h3>
+<ul>
+<li>Prior classical (vertical) uterine incision or myomectomy entering cavity</li>
+<li>Placenta previa or vasa previa</li>
+<li>Active genital herpes outbreak</li>
+<li>Transverse fetal lie</li>
+<li>Prolapsed umbilical cord</li>
+</ul>
+
+<h3>Admission Checklist</h3>
 <ol>
 <li>Complete H&amp;P and sign consent forms with patient</li>
-<li>Add admission orders (Vaginal birth intrapartum smart set)</li>
+<li>Add admission orders (Vaginal birth intrapartum SmartSet)</li>
 <li>Leopold's on every patient; pelvimetry on nulliparous patients</li>
-<li>Determine if intrapartum antibiotics needed for GBS status</li>
-<li>Determine if 3rd trimester labs are up to date</li>
-</ol>`},
+<li>Determine if intrapartum antibiotics needed (GBS status, GBS unknown at ≥37 wks → treat if any risk factor)</li>
+<li>Confirm 3rd trimester labs up to date (GBS, CBC, type &amp; screen)</li>
+<li>Bishop score — if unfavorable (&lt;6), cervical ripening agent first (Foley bulb, misoprostol, or dinoprostone per senior plan)</li>
+</ol>
+<div class="tip-box">Bishop score ≥8 = favorable cervix; proceed to oxytocin. Score &lt;6 = cervical ripening recommended first.</div>`},
 
 { id:'t2-13', s:'s2', title:'Discharge Instructions', summary:'Return precautions for viable-stage patients', content:`
-<p>For all "Viable Stage of Pregnancy" patients — return if:</p>
+<h3>When NOT to Discharge — Hold for Further Evaluation</h3>
+<table>
+<tr><th>Finding</th><th>Action</th></tr>
+<tr><td>Non-reassuring NST / BPP ≤6/10</td><td>Notify senior, do not discharge until resolved</td></tr>
+<tr><td>Oligohydramnios (AFI &lt;5)</td><td>Senior evaluation — may need admission or IOL</td></tr>
+<tr><td>Contractions Q3–4 min with cervical change</td><td>Admit for labor evaluation</td></tr>
+<tr><td>Confirmed ROM at any GA</td><td>Admit — do not send home</td></tr>
+<tr><td>Hypertension (BP ≥140/90 on repeat)</td><td>Serial BPs × 1h, labs, senior evaluation</td></tr>
+<tr><td>Signs of infection / chorioamnionitis</td><td>Admit, do not discharge</td></tr>
+<tr><td>Hemodynamic instability</td><td>Stabilize, do not discharge</td></tr>
+</table>
+
+<h3>Return Precautions — All Viable Pregnancies</h3>
+<p>Instruct patient to return to triage if she experiences any of the following:</p>
 <ol>
-<li>Decreased fetal movement (give kick count charts)</li>
-<li>Uterine contractions Q4–5</li>
-<li>Vaginal bleeding</li>
-<li>SROM</li>
-<li>Give follow-up clinic appointment to appropriate provider</li>
+<li><strong>Decreased fetal movement</strong> — give kick count chart; &lt;10 movements in 2 hours = return</li>
+<li><strong>Regular uterine contractions Q4–5 min</strong> lasting ≥1 hour</li>
+<li><strong>Vaginal bleeding</strong> — any amount beyond light spotting</li>
+<li><strong>Leakage of fluid / possible ROM</strong></li>
+<li><strong>Severe headache, visual changes, RUQ pain</strong> — signs of preeclampsia</li>
+<li><strong>Fever ≥100.4°F (38°C)</strong></li>
+<li><strong>Chest pain or shortness of breath</strong></li>
+<li>Any concern or symptom that feels urgent</li>
+</ol>
+<ol start="9">
+<li>Give follow-up clinic appointment to appropriate provider before discharge</li>
 </ol>
 <div class="tip-box">SmartPhrase: <code>.dctriage</code></div>`},
 
 { id:'t2-14', s:'s2', title:'Nausea & Vomiting in Pregnancy', summary:'ACOG stepwise algorithm for NVP and hyperemesis gravidarum', content:`
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Diagnosis</th><th>Key Features</th></tr>
+<tr><td><strong>NVP (normal morning sickness)</strong></td><td>Peaks 8–10 wks, resolves by 20 wks in most; no weight loss &gt;5%, labs normal</td></tr>
+<tr><td><strong>Hyperemesis gravidarum</strong></td><td>Weight loss &gt;5% pre-pregnancy weight, ketonuria, dehydration, electrolyte abnormalities, requires IV therapy</td></tr>
+<tr><td><strong>Gastroenteritis</strong></td><td>Acute onset, diarrhea, fever, sick contacts — not exclusively AM, not GA-specific</td></tr>
+<tr><td><strong>UTI / pyelonephritis</strong></td><td>Dysuria, frequency, flank pain, fever; UA positive; can cause severe nausea/vomiting</td></tr>
+<tr><td><strong>Appendicitis</strong></td><td>RLQ pain (often displaced upward in pregnancy), fever, leukocytosis; N/V is secondary</td></tr>
+<tr><td><strong>Cholecystitis / biliary colic</strong></td><td>RUQ/epigastric pain, fatty food trigger, + Murphy's sign on U/S</td></tr>
+<tr><td><strong>Pancreatitis</strong></td><td>Epigastric pain radiating to back, elevated lipase/amylase</td></tr>
+<tr><td><strong>Hepatitis</strong></td><td>Jaundice, elevated LFTs, exposure history</td></tr>
+<tr><td><strong>Hyperthyroidism / thyroid storm</strong></td><td>TSH low, free T4 elevated; tachycardia, tremor — hCG can stimulate TSH receptor</td></tr>
+<tr><td><strong>Molar pregnancy</strong></td><td>Severe NVP &lt;14 wks + very high hCG + abnormal U/S (snowstorm appearance)</td></tr>
+<tr><td><strong>AFLP / HELLP</strong></td><td>3rd trimester; jaundice, RUQ pain, coagulopathy, thrombocytopenia</td></tr>
+</table>
+
+<h3>Initial Workup</h3>
+<ul>
+<li><strong>UA</strong> — ketones (assess severity), glucose, signs of UTI</li>
+<li><strong>BMP</strong> — Na, K, Cl, CO2 (hypokalemic hypochloremic metabolic alkalosis in HG), Cr, BUN</li>
+<li><strong>LFTs</strong> — mildly elevated in HG; significantly elevated suggests hepatic cause</li>
+<li><strong>TSH / free T4</strong> — transient gestational hyperthyroidism common in HG; treat only if symptomatic thyrotoxicosis</li>
+<li><strong>CBC</strong> — hemoconcentration suggests dehydration</li>
+<li><strong>U/S</strong> — confirm viable IUP, r/o molar pregnancy, r/o multiple gestation (higher hCG → worse NVP)</li>
+</ul>
 <div class="tip-box">Source: ACOG Practice Bulletin. Stepwise management — escalate only with persistent symptoms at each level.</div>
 
 <h3>Step 1 — First Line: Nonpharmacologic</h3>
