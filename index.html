@@ -3108,15 +3108,71 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <tr><td>Console Surgeon</td><td>20 cases</td><td>30 in log; 20 with detailed evaluation + GEARS (&gt;50% procedure, score &gt;20)</td></tr>
 </table>`},
 
-{ id:'th-6', s:'s9', title:'Monthly Call Schedule', summary:'Live call schedule — updated from Google Sheets', content:`
-<div class="tip-box" id="call-last-updated">📅 Loading call schedule...</div>
-<div id="call-schedule-table"><div style="text-align:center;padding:30px;color:var(--muted)">⏳ Fetching schedule...</div></div>
-<p style="font-size:.78rem;color:var(--muted);margin-top:12px">Schedule is pulled live from Google Sheets. Last fetched time shown above. Works offline using last cached version.</p>`},
+{ id:'th-6', s:'s9', title:'Glove Sizes', summary:'Top glove, under glove, and preferences for all residents and attendings', content:`
+<div class="tip-box"><strong>Note:</strong> If no preference is listed, assume blue/green under glove if available. Updated 6/2026.</div>
 
-{ id:'th-7', s:'s9', title:'Clinic Schedule', summary:'Live weekly clinic schedule — updated from Google Sheets', content:`
-<div class="tip-box" id="clinic-last-updated">📅 Loading clinic schedule...</div>
-<div id="clinic-schedule-table"><div style="text-align:center;padding:30px;color:var(--muted)">⏳ Fetching schedule...</div></div>
-<p style="font-size:.78rem;color:var(--muted);margin-top:12px">Schedule is pulled live from Google Sheets. Last fetched time shown above. Works offline using last cached version.</p>`},
+<h3>Residents</h3>
+<div class="sched-wrap">
+<table>
+<tr><th>Resident</th><th>Top Glove</th><th>Under Glove</th><th>Preferences</th></tr>
+<tr><td>Acklin</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Alawode</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Branch</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>Caldwell</td><td>6</td><td>6</td><td></td></tr>
+<tr><td>Edgar</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Glover</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Greene</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Hill</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Ison</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>Maafoh</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>May</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Miller</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Molleti</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Nkansah</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>Ndukwe</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Paris</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Pogue</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Sei</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Singh</td><td>5.5</td><td>5.5</td><td>Other option: 5.5/6</td></tr>
+<tr><td>Terrell</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Torres-Lopez</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Turner</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>West</td><td>8</td><td>8</td><td></td></tr>
+<tr><td>Woodard</td><td>7</td><td>6.5</td><td></td></tr>
+</table>
+</div>
+
+<h3>Attendings</h3>
+<div class="sched-wrap">
+<table>
+<tr><th>Attending</th><th>Top Glove</th><th>Under Glove</th><th>Preferences</th></tr>
+<tr><td>Bright</td><td>8</td><td>8</td><td></td></tr>
+<tr><td>Carroll</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>Crawford</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Crenshaw</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Culley</td><td>7.5</td><td>8</td><td>Biogel (or equivalent) underglove</td></tr>
+<tr><td>D. Wilson</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Del Priore</td><td>7.5</td><td>8</td><td></td></tr>
+<tr><td>Geary</td><td>7</td><td>7.5</td><td></td></tr>
+<tr><td>Greene-Johnson</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>Griffin</td><td>5.5</td><td>5.5</td><td>Other option: 5.5/6</td></tr>
+<tr><td>Hamilton</td><td>5.5</td><td>6</td><td></td></tr>
+<tr><td>Henry</td><td>7</td><td>7.5</td><td></td></tr>
+<tr><td>Hughes</td><td>6.5</td><td>7</td><td>Sensicare top glove</td></tr>
+<tr><td>L. Wilson</td><td>7.5</td><td>7.5</td><td>Non latex</td></tr>
+<tr><td>Leonis</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Matthews</td><td>7</td><td>7.5</td><td></td></tr>
+<tr><td>McCarty</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Olanrewaju</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Phillips</td><td>6</td><td>6.5</td><td></td></tr>
+<tr><td>Ross</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Saint Louis</td><td>6.5</td><td>7</td><td></td></tr>
+<tr><td>Simmons</td><td>6.5</td><td>6.5</td><td></td></tr>
+<tr><td>Sinclair</td><td>6.5</td><td>—</td><td>One BLUE/GREEN glove</td></tr>
+<tr><td>Stetzer</td><td>7</td><td>—</td><td>One WHITE glove</td></tr>
+<tr><td>Wilmot</td><td>8</td><td>8</td><td></td></tr>
+</table>
+</div>`},
 
 // ── SECTION 10: STUDY MATERIALS ──────────────────────────
 { id:'ts-1', s:'s9', title:'2-Year Reading Schedule', summary:'Williams OB + Williams GYN weekly reading plan', content:`
