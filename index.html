@@ -270,7 +270,6 @@ const SECTIONS = [
   { id:'s7', title:'Documentation',            desc:'Notes, dictations, EPIC, and medications',        icon:'📝', color:'#06A77D', light:'#E8F5F0' },
   { id:'s8', title:'Rotations',               desc:'Expectations and weekly curriculum for each rotation', icon:'🎓', color:'#1E90FF', light:'#E6F2FF' },
   { id:'s9', title:'Housekeeping',            desc:'Master schedule, case logs, reading plan, and anatomy references',  icon:'🗂️', color:'#546E7A', light:'#ECEFF1' },
-  { id:'s10', title:'VA Rotation',            desc:'Orientation, access, pre-op process, and logistics at Atlanta VAMC', icon:'🏛️', color:'#B45309', light:'#FEF3C7' },
 ];
 
 const TOPICS = [
@@ -5126,7 +5125,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 </ul>`},
 
 // ── SECTION 10: VA ROTATION ──────────────────────────────
-{ id:'t10-1', s:'s10', title:'Expectations', summary:'Arrival times, preparation, communication, and hand-off standards', content:`
+{ id:'tva-1', s:'s8', groupId:'va', groupOrder:1, title:'Expectations', summary:'Arrival times, preparation, communication, and hand-off standards', content:`
 <div class="tip-box">The Gynecology Team has the privilege and responsibility of serving a special group of people — our veterans. Hold this standard in every interaction.</div>
 <h3>Core Expectations</h3>
 <ul>
@@ -5145,7 +5144,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <tr><td>Dr. Khanna</td><td>786-553-7189</td></tr>
 </table>`},
 
-{ id:'t10-2', s:'s10', title:'Parking & Building Layout', summary:'Where to park and what is on each floor of Atlanta VAMC', content:`
+{ id:'tva-2', s:'s8', groupId:'va', groupOrder:2, title:'Parking & Building Layout', summary:'Where to park and what is on each floor of Atlanta VAMC', content:`
 <h3>Parking</h3>
 <ul>
 <li>Enter from <strong>Clairmont Road side</strong> — permit parking only</li>
@@ -5167,7 +5166,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <tr><td><strong>10th</strong></td><td>Telemetry</td></tr>
 </table>`},
 
-{ id:'t10-3', s:'s10', title:'Phone Numbers', summary:'VA main line, OR, surgery, departments, labs, radiology, floors, and consults', content:`
+{ id:'tva-3', s:'s8', groupId:'va', groupOrder:3, title:'Phone Numbers', summary:'VA main line, OR, surgery, departments, labs, radiology, floors, and consults', content:`
 <h3>Calling the VA</h3>
 <ul>
 <li><strong>From outside:</strong> (404) 321-6111 → dial 6-digit extension (20 + 4-digit ext) when prompted</li>
@@ -5242,7 +5241,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <tr><td>CCU/MICU</td><td>207020 / 207126</td></tr>
 </table>`},
 
-{ id:'t10-4', s:'s10', title:'Call Schedule (QGenda)', summary:'How to access the VA on-call schedule via QGenda', content:`
+{ id:'tva-4', s:'s8', groupId:'va', groupOrder:4, title:'Call Schedule (QGenda)', summary:'How to access the VA on-call schedule via QGenda', content:`
 <h3>Accessing the Call Schedule</h3>
 <ul>
 <li><strong>VA Online:</strong> <a href="https://qgenda.com">QGenda</a> — check VA email (in "Other" folder) for activation email; can switch to Emory or MSM email once activated</li>
@@ -5261,7 +5260,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <h3>Communicating via Microsoft Teams</h3>
 <p style="font-size:.85rem;color:var(--muted)">Access the surgery team channel via your VA Microsoft Teams account for day-to-day communication with attendings and staff.</p>`},
 
-{ id:'t10-5', s:'s10', title:'Getting Computer Access', summary:'TMS training, fingerprinting, PIV card, and logging into VA computers step by step', content:`
+{ id:'tva-5', s:'s8', groupId:'va', groupOrder:5, title:'Getting Computer Access', summary:'TMS training, fingerprinting, PIV card, and logging into VA computers step by step', content:`
 <div class="tip-box"><strong>Overview:</strong> Step 1 — TMS training + fingerprinting (simultaneously, 30–90 days before rotation). Step 2 — Get VA username/password and CPRS codes. Step 3 — Request PIV card.</div>
 
 <h3>Step 1A — TMS Mandatory Training</h3>
@@ -5328,7 +5327,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 </ol>
 <div class="warn-box">Accounts are disabled after 30 days of inactivity and terminated after 364 days. Log in regularly to keep access active.</div>`},
 
-{ id:'t10-6', s:'s10', title:'VA Terminology & Home Access', summary:'Key VA terms, codes, rules, and how to access CPRS from home', content:`
+{ id:'tva-6', s:'s8', groupId:'va', groupOrder:6, title:'VA Terminology & Home Access', summary:'Key VA terms, codes, rules, and how to access CPRS from home', content:`
 <h3>Key Terms</h3>
 <table>
 <tr><th>Term</th><th>What It Is</th></tr>
@@ -5359,7 +5358,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <li>Quick reference: bit.ly/EmoryIM</li>
 </ul>`},
 
-{ id:'t10-7', s:'s10', title:'Scrubs & Dress Code', summary:'VA scrub requirements, OR attire rules, and how to get your scrub card', content:`
+{ id:'tva-7', s:'s8', groupId:'va', groupOrder:7, title:'Scrubs & Dress Code', summary:'VA scrub requirements, OR attire rules, and how to get your scrub card', content:`
 <h3>Getting Scrubs</h3>
 <ul>
 <li>VA-issued scrubs are <strong>required</strong> in the OR — personal scrubs not permitted</li>
@@ -5378,7 +5377,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <li>Do <strong>not</strong> wear VA scrubs to/from work — they must not leave the facility</li>
 </ul>`},
 
-{ id:'t10-8', s:'s10', title:'Discharges & Clinic Encounters', summary:'Discharge orders, summaries, clinic encounter completion, and booking OR cases', content:`
+{ id:'tva-8', s:'s8', groupId:'va', groupOrder:8, title:'Discharges & Clinic Encounters', summary:'Discharge orders, summaries, clinic encounter completion, and booking OR cases', content:`
 <h3>Discharge Orders</h3>
 <ul>
 <li>Discharge orders should be completed <strong>before noon</strong></li>
@@ -5414,7 +5413,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <br>• Consults/Echo: page the appropriate fellow
 <br>• EEG: page neurology on-call resident/attending</div>`},
 
-{ id:'t10-9', s:'s10', title:'Pre-Op Process', summary:'H&P, consents, pre-op labs, type and screen, and anesthesia pre-op requirements', content:`
+{ id:'tva-9', s:'s8', groupId:'va', groupOrder:9, title:'Pre-Op Process', summary:'H&P, consents, pre-op labs, type and screen, and anesthesia pre-op requirements', content:`
 <h3>Before Surgery — Checklist</h3>
 <table>
 <tr><th>Item</th><th>Requirement</th></tr>
@@ -5457,7 +5456,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <li>Always add anticipated OR date in comments</li>
 </ul>`},
 
-{ id:'t10-10', s:'s10', title:'Day of Surgery Tasks', summary:'Morning of surgery checklist — H&P update, consent, site marking, labs, anesthesia coordination', content:`
+{ id:'tva-10', s:'s8', groupId:'va', groupOrder:10, title:'Day of Surgery Tasks', summary:'Morning of surgery checklist — H&P update, consent, site marking, labs, anesthesia coordination', content:`
 <h3>Pre-Op Checklist — Day of Surgery</h3>
 <table>
 <tr><th>Task</th><th>Details</th></tr>
@@ -5477,7 +5476,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 </table>
 <div class="tip-box">Surgery provides patient instructions on when to stop/restart anticoagulation and antiplatelet agents — document clearly in your note for anesthesia. Antihypertensive and diabetes medication holding instructions come from the anesthesia pre-op clinic.</div>`},
 
-{ id:'t10-11', s:'s10', title:'Gyn Low Bleeding Risk Cases', summary:'Gynecology procedures that do not require type and screen — pre-op labs valid for 6 months', content:`
+{ id:'tva-11', s:'s8', groupId:'va', groupOrder:11, title:'Gyn Low Bleeding Risk Cases', summary:'Gynecology procedures that do not require type and screen — pre-op labs valid for 6 months', content:`
 <div class="tip-box">For cases on this list: labs valid for 6 months (not 90 days), and <strong>Type &amp; Screen is NOT required</strong>.</div>
 <h3>Gynecology Low Bleeding Risk Procedures</h3>
 <ul>
@@ -5496,7 +5495,7 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <li>Vulvar/vaginal wide local excision</li>
 </ul>`},
 
-{ id:'t10-12', s:'s10', title:'Peri-op Medication Management', summary:'Anesthesia SOP for antihypertensives and diabetes medications around surgery', content:`
+{ id:'tva-12', s:'s8', groupId:'va', groupOrder:12, title:'Peri-op Medication Management', summary:'Anesthesia SOP for antihypertensives and diabetes medications around surgery', content:`
 <h3>Cardiovascular & Antihypertensives — Anesthesia SOP</h3>
 <table>
 <tr><th>Drug Class</th><th>Examples</th><th>Instruction</th></tr>
@@ -5552,6 +5551,7 @@ const ROTATION_STUBS = [
   { id:'rg-fp',  s:'s8', isGroup:true, groupId:'fp',  title:'Family Planning Rotation', summary:'Expectations and full weekly curriculum for Family Planning',  icon:'💊', color:'#AD1457', light:'#FCE4EC' },
   { id:'rg-nf',  s:'s8', isGroup:true, groupId:'nf',  title:'Night Float',        summary:'Expectations, emergency procedures, and documentation tips',         icon:'🌙', color:'#4527A0', light:'#EDE7F6' },
   { id:'rg-rei', s:'s8', isGroup:true, groupId:'rei', title:'REI Rotation',       summary:'Full weekly curriculum for Reproductive Endocrinology & Infertility', icon:'🔬', color:'#6D4C41', light:'#EFEBE9' },
+  { id:'rg-va',  s:'s8', isGroup:true, groupId:'va',  title:'VA Rotation',        summary:'Orientation, logistics, computer access, and pre-op process at Atlanta VAMC', icon:'🏛️', color:'#B45309', light:'#FEF3C7' },
 ];
 ROTATION_STUBS.forEach(s => TOPIC_MAP[s.id] = s);
 
