@@ -157,6 +157,16 @@ a{color:inherit;text-decoration:none}
   #sec-cards-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px}
   .sec-card{margin:0}
 }
+.survey-q{margin:0 0 18px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+.survey-label{display:block;font-weight:600;font-size:.92rem;margin-bottom:8px;color:var(--text)}
+.survey-label-sub{display:block;font-size:.8rem;color:var(--muted);margin:-4px 0 8px}
+.survey-opts{display:flex;flex-direction:column;gap:8px}.survey-opts label{display:flex;align-items:center;gap:8px;font-size:.9rem;cursor:pointer}
+.survey-opts input[type=radio]{accent-color:var(--primary);width:16px;height:16px}
+.scale-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.scale-row .scale-lbl{font-size:.75rem;color:var(--muted);flex:0 0 auto}
+.scale-row .scale-btns{display:flex;gap:4px;flex:1}
+.scale-btn{flex:1;padding:8px 4px;border:2px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-weight:700;font-size:.9rem;cursor:pointer;text-align:center;transition:all .15s}
+.scale-btn.selected{background:var(--primary);color:#fff;border-color:var(--primary)}
 .sched-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px 16px;border:2px solid #B0BEC5;border-radius:8px}
 .sched-wrap table{border-collapse:collapse;min-width:700px;width:100%;font-size:11px;margin:0}
 .sched-wrap th{background:#37474F;color:#fff;padding:6px 5px;text-align:center;white-space:nowrap;border:1px solid #546E7A}
@@ -240,6 +250,9 @@ a{color:inherit;text-decoration:none}
   </button>
   <button class="tab" id="tab-bookmarks" onclick="showBookmarks()">
     <span class="ti">🔖</span>Saved
+  </button>
+  <button class="tab" id="tab-survey" onclick="showSurvey()">
+    <span class="ti">📋</span>Survey
   </button>
 </div>
 
@@ -4575,6 +4588,124 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 </table>
 <div class="warn-box">Ovulation can return as early as <strong>25 days postpartum</strong> in non-breastfeeding patients. Counsel all postpartum patients before discharge about contraception.</div>`},
 
+{ id:'th-10', s:'s9', title:'Intern Readiness Pretest', summary:'Research pretest — clinical comfort and residency readiness survey', content:`
+<div class="tip-box"><strong>Research Survey — Pre-App Use</strong><br>This survey is anonymous and takes about 5 minutes. Your responses help evaluate whether this app improves intern preparedness. Please complete it <em>before</em> using the manual as a study resource.</div>
+
+<div id="survey-done" style="display:none;background:var(--success,#e8f5e9);border:2px solid #4caf50;border-radius:10px;padding:20px;text-align:center;margin:16px 0">
+  <div style="font-size:2rem;margin-bottom:8px">✅</div>
+  <strong>Survey submitted — thank you!</strong>
+  <p style="margin:8px 0 4px;font-size:.9rem">Your responses have been saved. Show your pretest ID to the research coordinator:</p>
+  <div id="survey-id" style="font-family:monospace;font-size:1.2rem;font-weight:700;color:#1a4f7a;letter-spacing:2px;margin:8px 0"></div>
+  <button onclick="surveyExport()" style="margin-top:12px;background:#1a4f7a;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:.95rem;cursor:pointer">Copy Results to Clipboard</button>
+</div>
+
+<form id="intern-survey" onsubmit="surveySubmit(event)" style="display:block">
+
+<h3>Part 1 — About You</h3>
+<div class="survey-q">
+<label class="survey-label">1. What PGY level are you starting?</label>
+<div class="survey-opts">
+  <label><input type="radio" name="pgy" value="PGY-1"> PGY-1</label>
+  <label><input type="radio" name="pgy" value="PGY-2"> PGY-2</label>
+  <label><input type="radio" name="pgy" value="PGY-3"> PGY-3</label>
+  <label><input type="radio" name="pgy" value="PGY-4"> PGY-4</label>
+</div></div>
+
+<div class="survey-q">
+<label class="survey-label">2. How much clinical OB/GYN experience did you have as a medical student?</label>
+<div class="survey-opts">
+  <label><input type="radio" name="exp" value="Very limited (1 rotation or less)"> Very limited (1 rotation or less)</label>
+  <label><input type="radio" name="exp" value="Some (2–3 rotations)"> Some (2–3 rotations)</label>
+  <label><input type="radio" name="exp" value="Significant (4+ rotations or research)"> Significant (4+ rotations or research)</label>
+</div></div>
+
+<h3>Part 2 — Clinical Comfort</h3>
+<p style="font-size:.85rem;color:var(--muted);margin-bottom:12px">Rate your current comfort level with each of the following. <strong>1 = Not at all comfortable &nbsp;|&nbsp; 5 = Very comfortable</strong></p>
+
+<div class="survey-q"><label class="survey-label">3. Performing the initial triage assessment of an obstetric patient</label>
+<div class="survey-scale" data-name="q_triage"></div></div>
+
+<div class="survey-q"><label class="survey-label">4. Interpreting a fetal heart rate tracing (NST / intrapartum strip)</label>
+<div class="survey-scale" data-name="q_fhr"></div></div>
+
+<div class="survey-q"><label class="survey-label">5. Performing a cervical exam and calculating Bishop score</label>
+<div class="survey-scale" data-name="q_cervix"></div></div>
+
+<div class="survey-q"><label class="survey-label">6. Recognizing the diagnostic criteria for preeclampsia</label>
+<div class="survey-label-sub">Including distinguishing mild vs. severe features and knowing when to start magnesium</label>
+<div class="survey-scale" data-name="q_preeclampsia"></div></div>
+
+<div class="survey-q"><label class="survey-label">7. Managing labor — induction and augmentation</label>
+<div class="survey-label-sub">Including appropriate use of Cytotec, Foley balloon, Cook catheter, and Pitocin</label>
+<div class="survey-scale" data-name="q_labor"></div></div>
+
+<div class="survey-q"><label class="survey-label">8. Recognizing and initiating management of obstetric emergencies</label>
+<div class="survey-label-sub">e.g., shoulder dystocia, cord prolapse, postpartum hemorrhage</label>
+<div class="survey-scale" data-name="q_emergency"></div></div>
+
+<div class="survey-q"><label class="survey-label">9. Evaluating and managing a patient presenting with vaginal bleeding in pregnancy</label>
+<div class="survey-scale" data-name="q_bleeding"></div></div>
+
+<div class="survey-q"><label class="survey-label">10. Counseling patients on contraception options</label>
+<div class="survey-label-sub">Including LARCs, hormonal methods, risks, benefits, and postpartum timing</label>
+<div class="survey-scale" data-name="q_contraception"></div></div>
+
+<div class="survey-q"><label class="survey-label">11. Approaching an initial GYN clinic visit</label>
+<div class="survey-label-sub">Including well-woman exam, Pap guidelines, STI screening</label>
+<div class="survey-scale" data-name="q_gyn_clinic"></div></div>
+
+<div class="survey-q"><label class="survey-label">12. Evaluating and managing abnormal uterine bleeding (AUB)</label>
+<div class="survey-scale" data-name="q_aub"></div></div>
+
+<div class="survey-q"><label class="survey-label">13. Understanding when and how to place a STAT consult or escalate to a senior resident / attending</label>
+<div class="survey-scale" data-name="q_escalate"></div></div>
+
+<div class="survey-q"><label class="survey-label">14. Navigating Epic (placing orders, writing notes, accessing results) at Grady Hospital</label>
+<div class="survey-scale" data-name="q_epic"></div></div>
+
+<h3>Part 3 — Attitudes &amp; Readiness</h3>
+<p style="font-size:.85rem;color:var(--muted);margin-bottom:12px"><strong>1 = Strongly disagree &nbsp;|&nbsp; 5 = Strongly agree</strong></p>
+
+<div class="survey-q"><label class="survey-label">15. Overall, I feel well prepared to begin intern year.</label>
+<div class="survey-scale" data-name="q_prepared"></div></div>
+
+<div class="survey-q"><label class="survey-label">16. I feel anxious or overwhelmed about starting residency.</label>
+<div class="survey-scale" data-name="q_anxious"></div></div>
+
+<div class="survey-q"><label class="survey-label">17. I am confident in my ability to make clinical decisions independently on call.</label>
+<div class="survey-scale" data-name="q_confident"></div></div>
+
+<div class="survey-q"><label class="survey-label">18. I understand the daily workflow and expectations at Grady Hospital / Morehouse OB/GYN.</label>
+<div class="survey-scale" data-name="q_workflow"></div></div>
+
+<div class="survey-q"><label class="survey-label">19. I feel comfortable asking for help from seniors or attendings when I am unsure.</label>
+<div class="survey-scale" data-name="q_askhelp"></div></div>
+
+<div class="survey-q"><label class="survey-label">20. I feel excited about starting residency.</label>
+<div class="survey-scale" data-name="q_excited"></div></div>
+
+<h3>Part 4 — Open Response</h3>
+
+<div class="survey-q">
+<label class="survey-label">21. What aspect of starting residency are you <em>most anxious</em> about?</label>
+<textarea name="q_most_anxious" rows="3" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--surface);color:var(--text);box-sizing:border-box" placeholder="Your response..."></textarea>
+</div>
+
+<div class="survey-q">
+<label class="survey-label">22. What do you feel <em>most prepared</em> for going into intern year?</label>
+<textarea name="q_most_prepared" rows="3" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--surface);color:var(--text);box-sizing:border-box" placeholder="Your response..."></textarea>
+</div>
+
+<div class="survey-q">
+<label class="survey-label">23. Is there a specific clinical topic or skill you wish you felt more prepared for? (optional)</label>
+<textarea name="q_gaps" rows="3" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--surface);color:var(--text);box-sizing:border-box" placeholder="Your response..."></textarea>
+</div>
+
+<div style="margin-top:24px;text-align:center">
+  <button type="submit" style="background:#1a4f7a;color:#fff;border:none;border-radius:10px;padding:14px 36px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;max-width:320px">Submit Pretest Survey</button>
+</div>
+</form>`},
+
 // ── SECTION 10: STUDY MATERIALS ──────────────────────────
 { id:'ts-1', s:'s9', title:'2-Year Reading Schedule', summary:'Williams OB + Williams GYN week-by-week reading plan', content:`
 <div class="tip-box">MSM OBGYN 2-Year Residency Reading Plan. Core texts: <strong>Williams Obstetrics (26th ed.)</strong> and <strong>Williams Gynecology (4th ed.)</strong>. One chapter per week — supplement with ACOG Practice Bulletins for your current rotation.</div>
@@ -4931,6 +5062,14 @@ function showBookmarks() {
   render();
 }
 
+function showSurvey() {
+  navHistory = [];
+  state = { view:'survey', secId:null, topicId:null };
+  activeTab = 'survey';
+  render();
+  window.scrollTo(0,0);
+}
+
 // ─────────────────────────────────────────────────────────
 // BOOKMARKS
 // ─────────────────────────────────────────────────────────
@@ -4960,6 +5099,7 @@ function render() {
   else if (state.view === 'topic')     app.innerHTML = renderTopic();
   else if (state.view === 'search')    app.innerHTML = renderSearch();
   else if (state.view === 'bookmarks') app.innerHTML = renderBookmarks();
+  else if (state.view === 'survey')    app.innerHTML = renderSurvey();
 }
 
 function updateHeader() {
@@ -4995,11 +5135,15 @@ function updateHeader() {
     h1.textContent = 'Saved';
     sub.textContent = `${bookmarks.length} saved topic${bookmarks.length!==1?'s':''}`;
     bm.className = '';
+  } else if (state.view === 'survey') {
+    h1.textContent = 'Pre-App Survey';
+    sub.textContent = 'Complete before using the manual';
+    bm.className = '';
   }
 }
 
 function updateTabs() {
-  ['manual','search','bookmarks'].forEach(t => {
+  ['manual','search','bookmarks','survey'].forEach(t => {
     document.getElementById('tab-'+t).className = 'tab' + (activeTab===t?' active':'');
   });
 }
@@ -5189,6 +5333,24 @@ function setSearch(val) {
   }, 50);
 }
 
+function renderSurvey() {
+  return `
+<div style="padding:16px 16px 24px;">
+  <div style="background:#E8F4F8;border-radius:12px;padding:14px 16px;margin-bottom:16px;border-left:4px solid #2E86AB;">
+    <p style="font-size:.85rem;color:#1B2D45;line-height:1.5;margin:0"><strong>Complete this survey before using the manual.</strong> Your responses are anonymous and help us understand how this app supports your transition into residency.</p>
+  </div>
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLScf_c6L2-NjllMMUnd2z2f-NyvOAyCYUA_S1ZEZyDYbp4v-ZQ/viewform?embedded=true"
+    width="100%"
+    height="2600"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    style="border-radius:8px;display:block;"
+  >Loading…</iframe>
+</div>`;
+}
+
 function renderBookmarks() {
   if (bookmarks.length === 0) {
     return `<div style="padding-top:20px">
@@ -5301,6 +5463,55 @@ async function loadSchedule(type) {
 
 // Hook into render to trigger schedule fetches
 const _origRender = typeof render === 'function' ? render : null;
+
+// ─────────────────────────────────────────────────────────
+// SURVEY FUNCTIONS
+// ─────────────────────────────────────────────────────────
+function surveyBuildScales() {
+  document.querySelectorAll('.survey-scale').forEach(el => {
+    const name = el.dataset.name;
+    if (!name) return;
+    el.innerHTML = '<div class="scale-row"><span class="scale-lbl">Not comfortable</span><div class="scale-btns">' +
+      [1,2,3,4,5].map(n => `<button type="button" class="scale-btn" data-val="${n}" data-name="${name}" onclick="surveyScale(this)">${n}</button>`).join('') +
+      '</div><span class="scale-lbl">Very comfortable</span></div>';
+  });
+}
+function surveyScale(btn) {
+  const name = btn.dataset.name;
+  document.querySelectorAll(`.scale-btn[data-name="${name}"]`).forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+function surveySubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('intern-survey');
+  const fd = new FormData(form);
+  const data = {};
+  for (const [k,v] of fd.entries()) data[k] = v;
+  // collect scale buttons
+  document.querySelectorAll('.scale-btn.selected').forEach(b => { data[b.dataset.name] = b.dataset.val; });
+  // validate required scales
+  const scales = ['q_triage','q_fhr','q_cervix','q_preeclampsia','q_labor','q_emergency','q_bleeding','q_contraception','q_gyn_clinic','q_aub','q_escalate','q_epic','q_prepared','q_anxious','q_confident','q_workflow','q_askhelp','q_excited'];
+  const missing = scales.filter(s => !data[s]);
+  if (!data.pgy) { alert('Please select your PGY level (Question 1).'); return; }
+  if (missing.length) { alert('Please answer all rating scale questions before submitting.'); return; }
+  data.timestamp = new Date().toISOString();
+  data.id = 'PRE-' + Date.now().toString(36).toUpperCase();
+  localStorage.setItem('intern_pretest', JSON.stringify(data));
+  form.style.display = 'none';
+  document.getElementById('survey-done').style.display = 'block';
+  document.getElementById('survey-id').textContent = data.id;
+}
+function surveyExport() {
+  const raw = localStorage.getItem('intern_pretest');
+  if (!raw) return;
+  const d = JSON.parse(raw);
+  const lines = Object.entries(d).map(([k,v]) => k + ': ' + v);
+  navigator.clipboard.writeText(lines.join('\n')).then(() => alert('Results copied to clipboard!'));
+}
+// Watch for survey scales being injected into the DOM
+new MutationObserver(function() {
+  if (document.querySelector('.survey-scale:empty')) surveyBuildScales();
+}).observe(document.getElementById('app') || document.body, {childList:true, subtree:true});
 
 // ─────────────────────────────────────────────────────────
 // INIT
