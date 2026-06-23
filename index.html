@@ -270,6 +270,7 @@ const SECTIONS = [
   { id:'s7', title:'Documentation',            desc:'Notes, dictations, EPIC, and medications',        icon:'📝', color:'#06A77D', light:'#E8F5F0' },
   { id:'s8', title:'Rotations',               desc:'Expectations and weekly curriculum for each rotation', icon:'🎓', color:'#1E90FF', light:'#E6F2FF' },
   { id:'s9', title:'Housekeeping',            desc:'Master schedule, case logs, reading plan, and anatomy references',  icon:'🗂️', color:'#546E7A', light:'#ECEFF1' },
+  { id:'s10', title:'VA Rotation',            desc:'Orientation, access, pre-op process, and logistics at Atlanta VAMC', icon:'🏛️', color:'#B45309', light:'#FEF3C7' },
 ];
 
 const TOPICS = [
@@ -5123,6 +5124,413 @@ My NPI is [NPI]. My contact is [phone]."</pre>
 <li>Forms the pelvic floor / pelvic diaphragm</li>
 <li>Defects → pelvic organ prolapse</li>
 </ul>`},
+
+// ── SECTION 10: VA ROTATION ──────────────────────────────
+{ id:'t10-1', s:'s10', title:'Expectations', summary:'Arrival times, preparation, communication, and hand-off standards', content:`
+<div class="tip-box">The Gynecology Team has the privilege and responsibility of serving a special group of people — our veterans. Hold this standard in every interaction.</div>
+<h3>Core Expectations</h3>
+<ul>
+<li><strong>Arrive on time</strong> — for the OR that means 45 minutes prior to start time</li>
+<li><strong>Come prepared</strong> — read about patients and cases prior to clinic and OR</li>
+<li><strong>Communicate</strong> when either of the above expectations cannot be met</li>
+<li><strong>Provide a warm handoff</strong> to the resident who follows you</li>
+</ul>
+<h3>Attending Contact Numbers</h3>
+<table>
+<tr><th>Attending</th><th>Phone</th></tr>
+<tr><td>Dr. Goedken</td><td>678-644-8943</td></tr>
+<tr><td>Dr. Smith</td><td>202-369-3473</td></tr>
+<tr><td>Dr. Karsten</td><td>478-273-0622</td></tr>
+<tr><td>Dr. Williams</td><td>404-735-1040</td></tr>
+<tr><td>Dr. Khanna</td><td>786-553-7189</td></tr>
+</table>`},
+
+{ id:'t10-2', s:'s10', title:'Parking & Building Layout', summary:'Where to park and what is on each floor of Atlanta VAMC', content:`
+<h3>Parking</h3>
+<ul>
+<li>Enter from <strong>Clairmont Road side</strong> — permit parking only</li>
+<li>Weekend/guest staff use the "Guest only parking lot"</li>
+<li>Trail to Lullwater nearby for reference</li>
+</ul>
+<h3>Floor Directory</h3>
+<table>
+<tr><th>Floor</th><th>What's There</th></tr>
+<tr><td><strong>Ground</strong></td><td>Gym (resident use), prosthetics, audiology</td></tr>
+<tr><td><strong>1st</strong></td><td>Parking lot entrance, cafeteria, Starbucks, ED, radiology, most clinics, duty-free store</td></tr>
+<tr><td><strong>2nd</strong></td><td>OR/PACU, minor procedures room, surgery offices, MICU/CCU/SICU, cath lab, outpatient lab, pathology, ICU call rooms, lactation room</td></tr>
+<tr><td><strong>3rd</strong></td><td>HR/Suitability — PIV office 3A-124</td></tr>
+<tr><td><strong>4th</strong></td><td>Psychiatry inpatient unit</td></tr>
+<tr><td><strong>6th</strong></td><td>Conference rooms, education office</td></tr>
+<tr><td><strong>7th</strong></td><td>General medicine (non-telemetry) &amp; oncology inpatients</td></tr>
+<tr><td><strong>8th</strong></td><td>Palliative care ward, surgical patient floor</td></tr>
+<tr><td><strong>9th</strong></td><td>Surgical patient floor, sleep lab</td></tr>
+<tr><td><strong>10th</strong></td><td>Telemetry</td></tr>
+</table>`},
+
+{ id:'t10-3', s:'s10', title:'Phone Numbers', summary:'VA main line, OR, surgery, departments, labs, radiology, floors, and consults', content:`
+<h3>Calling the VA</h3>
+<ul>
+<li><strong>From outside:</strong> (404) 321-6111 → dial 6-digit extension (20 + 4-digit ext) when prompted</li>
+<li><strong>From inside:</strong> dial the 6-digit extension directly (20 + 4-digit ext)</li>
+<li><strong>For Grady/Emory numbers:</strong> dial 9 + the number</li>
+</ul>
+<h3>General Numbers</h3>
+<table>
+<tr><th>Service</th><th>Extension</th></tr>
+<tr><td>Main</td><td>404-321-6111 ext 20XXXX</td></tr>
+<tr><td>Admissions</td><td>206458 / 206459</td></tr>
+<tr><td>AOD (transfers/weekend transport)</td><td>207465</td></tr>
+<tr><td>Bed Control</td><td>122120 / 205060</td></tr>
+<tr><td>Nursing Supervisor</td><td>404-719-8283 / Pager 51-900</td></tr>
+<tr><td>ER</td><td>207614</td></tr>
+<tr><td>Fast Track</td><td>201345 / 201346</td></tr>
+<tr><td>HELP Desk</td><td>204357 → 1 → 1</td></tr>
+<tr><td>Phlebotomy</td><td>202015 / 202016 / 122039</td></tr>
+</table>
+<h3>Surgery / OR</h3>
+<table>
+<tr><th>Service</th><th>Extension</th></tr>
+<tr><td>OR Control Desk</td><td>204608 / 207680</td></tr>
+<tr><td>OR Charge Nurse</td><td>203633</td></tr>
+<tr><td>OR Front Desk</td><td>206280</td></tr>
+<tr><td>Anesthesiology</td><td>206270</td></tr>
+<tr><td>PACU</td><td>206337 / 206726</td></tr>
+</table>
+<h3>Case Managers</h3>
+<table>
+<tr><th>Specialty</th><th>Name</th><th>Extension / Cell</th></tr>
+<tr><td><strong>Gynecology</strong></td><td>Alicia Cheatham</td><td>205124 / 470-558-8943</td></tr>
+<tr><td>General Surgery</td><td>Sherena Landers</td><td>123790</td></tr>
+<tr><td>Urology</td><td>Renee Folsom</td><td>207927 / 404-825-6624</td></tr>
+<tr><td>Vascular Surgery</td><td>Sabrina Nolton</td><td>206814 / 470-558-5593</td></tr>
+<tr><td>Orthopedics</td><td>Glenda Joseph</td><td>205119 / 404-398-4576</td></tr>
+<tr><td>ENT/Plastics/Hands</td><td>Alfreda King</td><td>206299 / 678-796-3007</td></tr>
+<tr><td>Neurosurgery</td><td>Rosie Young</td><td>121842 / 470-240-6779</td></tr>
+<tr><td>Podiatry</td><td>Cheryl Lee</td><td>205525 / 404-719-2601</td></tr>
+<tr><td>Thoracic Surgery</td><td>Cody Long</td><td>202219 / 330-256-8081</td></tr>
+</table>
+<h3>Key Departments</h3>
+<table>
+<tr><th>Department</th><th>Extension</th></tr>
+<tr><td>Blood Bank</td><td>202011</td></tr>
+<tr><td>IR</td><td>204649 / 205619</td></tr>
+<tr><td>Pharmacy (inpatient)</td><td>206133 / 206183</td></tr>
+<tr><td>Pharmacy (discharge)</td><td>207350 / 207351</td></tr>
+<tr><td>Pathology</td><td>202059 / 202048</td></tr>
+<tr><td>Social Work</td><td>202097</td></tr>
+<tr><td>PICC Line Team</td><td>206067</td></tr>
+<tr><td>Environmental Services</td><td>121064</td></tr>
+</table>
+<h3>Radiology / Imaging</h3>
+<table>
+<tr><th>Service</th><th>Extension</th></tr>
+<tr><td>CT</td><td>205660 / 206750</td></tr>
+<tr><td>MRI</td><td>202772</td></tr>
+<tr><td>Ultrasound</td><td>202364 / 206750</td></tr>
+<tr><td>XR</td><td>206750</td></tr>
+<tr><td>ECHO</td><td>206988 / 206989</td></tr>
+<tr><td>STAT Rad Pager (nights/weekends)</td><td>201590-060</td></tr>
+</table>
+<h3>Floors &amp; ICUs</h3>
+<table>
+<tr><th>Unit</th><th>Extension</th></tr>
+<tr><td>7C</td><td>207000 / 207001</td></tr>
+<tr><td>8C (surgical)</td><td>204340 / 204775</td></tr>
+<tr><td>9C</td><td>207122 / 207123</td></tr>
+<tr><td>10C (telemetry)</td><td>206952 / 206954</td></tr>
+<tr><td>SICU</td><td>206962 / 206963</td></tr>
+<tr><td>CCU/MICU</td><td>207020 / 207126</td></tr>
+</table>`},
+
+{ id:'t10-4', s:'s10', title:'Call Schedule (QGenda)', summary:'How to access the VA on-call schedule via QGenda', content:`
+<h3>Accessing the Call Schedule</h3>
+<ul>
+<li><strong>VA Online:</strong> <a href="https://qgenda.com">QGenda</a> — check VA email (in "Other" folder) for activation email; can switch to Emory or MSM email once activated</li>
+<li><strong>Via CPRS:</strong> Tools → "QGenda On Call Schedule"</li>
+<li><strong>VA Intranet:</strong> www.atlanta.va.gov (home page on any VA computer browser)</li>
+</ul>
+<div class="tip-box">SICU attending is available Mon–Fri 7am–5pm and Sat–Sun 8am–2pm. Find their contact under "Anesthesia ICU" in QGenda or ask the SICU charge nurse.</div>
+<h3>SICU Coverage Expectations</h3>
+<ul>
+<li>You are the <strong>primary team</strong> when your patients are in the SICU — communicate with RT for vent settings, decide on pressors, etc.</li>
+<li>Communicate with SICU attending daily when they are present; discuss plans</li>
+<li>Place a "SURGICAL CRITICAL CARE (Inpt) CONSULT" order and give direct report when admitting to SICU</li>
+<li>Primary team places all admission and discharge orders</li>
+<li>At night: eICU available but no one in-house — be at bedside for real decisions and update SICU team in the morning</li>
+</ul>
+<h3>Communicating via Microsoft Teams</h3>
+<p style="font-size:.85rem;color:var(--muted)">Access the surgery team channel via your VA Microsoft Teams account for day-to-day communication with attendings and staff.</p>`},
+
+{ id:'t10-5', s:'s10', title:'Getting Computer Access', summary:'TMS training, fingerprinting, PIV card, and logging into VA computers step by step', content:`
+<div class="tip-box"><strong>Overview:</strong> Step 1 — TMS training + fingerprinting (simultaneously, 30–90 days before rotation). Step 2 — Get VA username/password and CPRS codes. Step 3 — Request PIV card.</div>
+
+<h3>Step 1A — TMS Mandatory Training</h3>
+<ul>
+<li>Website: <strong>VA TMS 2.0</strong> — training is annual and mandatory (every 364 days)</li>
+<li>Computer access is terminated if delinquent</li>
+<li>New trainees: self-enroll in TMS (see Self-Enrollment User Guide)</li>
+<li>Contact: VHAATGTMSEmailGroup@va.gov for account issues or transfers</li>
+</ul>
+<table>
+<tr><th>Training</th><th>Course #</th></tr>
+<tr><td>VHA Mandatory Training for Trainees (first time)</td><td>#3185966</td></tr>
+<tr><td>Privacy and HIPAA Training</td><td>#10203</td></tr>
+<tr><td>Annual Refresher</td><td>#3192008</td></tr>
+</table>
+
+<h3>Step 1B — Fingerprinting</h3>
+<ul>
+<li>Schedule at any local enrollment center (GSA scheduler); <strong>PIV pickup MUST be at Atlanta VAMC</strong></li>
+<li>PIV Office: 3rd floor, HR hallway — 404-321-6111 x201539</li>
+<li>Bring 2 forms of unexpired ID</li>
+<li>Adjudication (approval) typically takes ~7 business days</li>
+</ul>
+
+<h3>Step 2 — Getting Login Codes</h3>
+<ul>
+<li>After MTT completed + fingerprints adjudicated, education staff requests codes</li>
+<li>Codes = network username, temp network password, CPRS access code, temp CPRS verify code</li>
+<li><strong>Must log into a VA computer within one week of receiving codes</strong> or they expire</li>
+<li>On-boarding contact: VHAATGSurgeryAdministrators@va.gov | Administrative Officer: Terry Mitchell</li>
+</ul>
+
+<h3>Step 3 — PIV Card</h3>
+<ul>
+<li>Sponsor: VHAATGSurgeryAdministrators@va.gov</li>
+<li>After sponsorship, you'll receive a scheduling link (accessible from VA network only)</li>
+<li>Bring 2 forms of unexpired government-issued ID — name must match your legal name in the PIV portal</li>
+<li>Contact Keisha Thompson for scheduling difficulties</li>
+</ul>
+
+<h3>Logging In Without PIV</h3>
+<ul>
+<li>Request a PIV Exemption first (call 855-673-4357 or ext 204357, available 24/7)</li>
+<li>Username: starts with VHAATG + last name + first initial (e.g., VHAATGWestA)</li>
+<li>Exemption lasts 14 days; trainees allowed two consecutive periods</li>
+<li>If asked, identify yourself as a "Health Professions Trainee"</li>
+</ul>
+
+<h3>Logging In With PIV</h3>
+<ul>
+<li>Insert card into keyboard slot or USB card reader (photo facing forward)</li>
+<li>Enter your 6-digit PIN when prompted</li>
+<li>May need to switch user or log off prior user first</li>
+</ul>
+
+<h3>Creating Your Signature Code</h3>
+<ol>
+<li>Click "VA Shortcuts" star on desktop → open VISTA-R3</li>
+<li>Log in with ACCESS and VERIFY codes (same as CPRS)</li>
+<li>Type <strong>TBOX</strong> and press Enter (may need to repeat if prompted)</li>
+<li>Type <strong>ELEC</strong> then hit Enter ×5 until "ENTER A NEW SIGNATURE CODE" appears</li>
+<li>Enter code: min. 6 characters, ALL CAPS, letters and numbers only (e.g., ABC123)</li>
+<li><strong>DO NOT LOSE YOUR SIGNATURE CODE</strong></li>
+</ol>
+<div class="warn-box">Accounts are disabled after 30 days of inactivity and terminated after 364 days. Log in regularly to keep access active.</div>`},
+
+{ id:'t10-6', s:'s10', title:'VA Terminology & Home Access', summary:'Key VA terms, codes, rules, and how to access CPRS from home', content:`
+<h3>Key Terms</h3>
+<table>
+<tr><th>Term</th><th>What It Is</th></tr>
+<tr><td><strong>Network Username/ID</strong></td><td>Used to log into computer without PIV. Starts with VHAATG (usually VHAATGLastNameFirstInitial)</td></tr>
+<tr><td><strong>Access Code</strong></td><td>Username for CPRS &amp; Vista. Does not expire. Not case sensitive.</td></tr>
+<tr><td><strong>Verify Code</strong></td><td>Password for CPRS &amp; Vista. 8–20 characters, combo of letters/numbers/symbols. May prompt change every 90 days.</td></tr>
+<tr><td><strong>Signature Code</strong></td><td>Used to sign notes &amp; orders in CPRS. Min 6 characters, ALL CAPS.</td></tr>
+<tr><td><strong>PIV PIN</strong></td><td>Created when PIV card issued. Acts as single sign-on for CPRS, TMS, etc.</td></tr>
+</table>
+<div class="warn-box">It is against national VA policy to take photos or audio recordings in the facility without specific permissions. No OR selfies. Clinical photos require documented patient consent — contact medical media for OR photos.</div>
+
+<h3>Home CPRS Access</h3>
+<p style="font-size:.85rem;margin-bottom:10px"><strong>Requirements:</strong> PIV + USB card reader OR MobilePASS App. Must be current on TMS training. Log into Citrix, Windows, and CPRS every 89 days to prevent account disabling.</p>
+<ol>
+<li>From a VA computer: go to https://vaww.ramp.vansoc.va.gov → "Self-Service Portal" → "Request Access"</li>
+<li>List <strong>Anne Tomolo, MD</strong> as your supervisor</li>
+<li>To log in from home: plug in PIV card reader → go to https://citrixaccess.va.gov</li>
+<li>Click "Use Smartcard" → choose "Desktops" → search "1VA Clinical (East/West/North/South)"</li>
+<li>Open the virtual desktop — use VA Clinical East for CPRS access</li>
+</ol>
+<div class="tip-box">Files saved on the virtual desktop are deleted when you log off. Save all files to your VA OneDrive instead.</div>
+
+<h3>CPRS Resources</h3>
+<ul>
+<li>TMS Course VA 35795: "CPRS Tab-by-Tab Training"</li>
+<li>How-to slide deck: "Surgery House Staff CPRS How-To Guides"</li>
+<li>IM CPRS Tutorial: https://inside.med.emory.edu/departments/medicine/documents/cprs-tutorial.pdf</li>
+<li>Quick reference: bit.ly/EmoryIM</li>
+</ul>`},
+
+{ id:'t10-7', s:'s10', title:'Scrubs & Dress Code', summary:'VA scrub requirements, OR attire rules, and how to get your scrub card', content:`
+<h3>Getting Scrubs</h3>
+<ul>
+<li>VA-issued scrubs are <strong>required</strong> in the OR — personal scrubs not permitted</li>
+<li>Fill out the scrub card form and email to VHAATGSurgeryAdministrators@va.gov</li>
+<li>Pick up your scrub card from surgery administrative offices (2nd floor, near OR)</li>
+<li>Scrubs also available at OR front desk as needed</li>
+</ul>
+<h3>OR Attire Rules</h3>
+<ul>
+<li><strong>Head covering:</strong> disposable or cloth hat — must confine all hair. Beard covers/hoods required for facial hair.</li>
+<li><strong>Undershirt:</strong> short-sleeve t-shirts only; no turtlenecks, no long sleeves extending past scrub top</li>
+<li><strong>Warm-up jackets:</strong> disposable long-sleeved only; no personal jackets in semi-restricted or restricted OR areas</li>
+<li><strong>Shoes:</strong> closed-toe, low heel, non-skid, easily cleanable. Disposable shoe covers required if shoes are not dedicated to OR areas.</li>
+<li><strong>Masks:</strong> surgical mask required at all times in restricted areas whenever a procedure is in progress or sterile setup has begun</li>
+<li><strong>Jewelry:</strong> rings must be removed before surgical scrub. Earrings must be kept under cap. Simple necklace may be worn if confined within scrub attire. No excessive jewelry.</li>
+<li>Do <strong>not</strong> wear VA scrubs to/from work — they must not leave the facility</li>
+</ul>`},
+
+{ id:'t10-8', s:'s10', title:'Discharges & Clinic Encounters', summary:'Discharge orders, summaries, clinic encounter completion, and booking OR cases', content:`
+<h3>Discharge Orders</h3>
+<ul>
+<li>Discharge orders should be completed <strong>before noon</strong></li>
+<li>Use generic DISCHARGE INSTRUCTIONS template and modify as needed (Gyn has no specialty-specific template)</li>
+<li>Home health referrals, nursing home paperwork, and narcotic prescriptions must be signed by the <strong>resident staff</strong> (PA cannot sign)</li>
+<li>Must use PIV card + PIN to sign narcotic scripts electronically</li>
+</ul>
+<h3>Discharge Summaries</h3>
+<ul>
+<li>Must be completed on the <strong>day of discharge</strong> from an inpatient encounter</li>
+<li>Observation admissions do not require a discharge summary</li>
+<li>Always attach the discharge summary to the encounter</li>
+<li>Do not delete any fields — "Surgical History," "Family History," etc. require text even if "Noncontributory"</li>
+</ul>
+<h3>Clinic Encounter Completion</h3>
+<ol>
+<li>You'll be prompted to complete an encounter when you sign your note</li>
+<li>Select visit type: New Patient, Consult, etc.</li>
+<li>Under section name: choose Problem-Focused, Detailed, or Comprehensive</li>
+<li>Answer "Service Connected?" — if the condition relates to military service, check the appropriate box</li>
+<li>Go to Diagnosis tab → select from problem list or use lexicon to look up ICD code</li>
+<li>All portions must be completed or the encounter will remain incomplete</li>
+</ol>
+<h3>Booking OR Cases from Clinic</h3>
+<ul>
+<li>Check with your attending regarding scheduling cases on the OR calendar</li>
+<li>There is a specialty-specific tracker — ask to be added</li>
+<li>For OR calendar access: contact your case manager (Alicia Cheatham, 205124)</li>
+</ul>
+<h3>STAT Orders — Important Note</h3>
+<div class="warn-box">Ordering consults, EKGs, EEGs, and ECHOs as "STAT" alone will NOT expedite them. You must call directly:
+<br>• EKG: talk to the nurse or unit clerk
+<br>• Consults/Echo: page the appropriate fellow
+<br>• EEG: page neurology on-call resident/attending</div>`},
+
+{ id:'t10-9', s:'s10', title:'Pre-Op Process', summary:'H&P, consents, pre-op labs, type and screen, and anesthesia pre-op requirements', content:`
+<h3>Before Surgery — Checklist</h3>
+<table>
+<tr><th>Item</th><th>Requirement</th></tr>
+<tr><td><strong>H&amp;P</strong></td><td>Must be written within 30 days of surgery using specialty-specific template; cosigned by attending</td></tr>
+<tr><td><strong>Consent</strong></td><td>Valid for 60 days; must be electronic via iMED — no paper consents</td></tr>
+<tr><td><strong>Labs (intermediate/high-risk)</strong></td><td>CBC, CMP, PT/INR within 90 days</td></tr>
+<tr><td><strong>Labs (low-risk)</strong></td><td>Within 6 months (see Low Bleeding Risk list)</td></tr>
+<tr><td><strong>CXR</strong></td><td>If patient being admitted and no prior CXR in system</td></tr>
+<tr><td><strong>EKG</strong></td><td>Patients age &gt;50 with HTN, diabetes, or MET &lt;4. Within 6 months (intermediate/high-risk) or 1 year (low-risk)</td></tr>
+</table>
+
+<h3>Consents (iMED)</h3>
+<ul>
+<li>All consents must be <strong>electronic via iMED</strong> — no paper consents accepted</li>
+<li>Put all attendings on each consent</li>
+<li>Consent covers treatment, anesthesia, surgery, and blood products in <strong>ONE FORM</strong></li>
+<li>All surgical patients must be asked about blood product acceptance — enter "Yes" or "No" (never select "blood is not clinically indicated" — requires re-consent)</li>
+<li>Obtain consent in clinic when possible; notify attending if unable or if technical issues arise</li>
+<li>If consenting day of surgery, ensure pre-op nurse knows and can print the document</li>
+<li>Consent is valid for 60 days</li>
+</ul>
+
+<h3>Type & Screen</h3>
+<ul>
+<li>Ordered <strong>×2 for ALL cases</strong> except approved low bleeding risk procedures</li>
+<li><strong>#1 Baseline T&S:</strong> within 90 days to assess for antibodies</li>
+<li><strong>#2 Current T&S:</strong> valid for transfusion for 72 hours only</li>
+<li>Collection methods: outpatient → send to lab; POHA → ward collect; inpatient → collect with AM labs</li>
+</ul>
+<div class="tip-box">If current T&S has not resulted by rollback time but a negative antibody screen exists within 90 days AND patient has had no transfusions since: attending anesthesiologist and surgeon may both agree to proceed with results pending.</div>
+
+<h3>Anesthesia Pre-Op Visit</h3>
+<ul>
+<li>Valid for 60 days; ideally scheduled 4 weeks before surgery for optimization</li>
+<li>Can be in-person, VVC, or telephone</li>
+<li>Place CPRS order — alternate between NP1 (RJ) and NP2 (Alex)</li>
+<li>In person: "ATL ANES PRE OP-NP1" or "ATL ANES PRE OP-NP2"</li>
+<li>VVC: "ATL VVC ANES PRE OP-NP1/NP2"</li>
+<li>Telephone: "ATL TELEPHONE ANES Preop-NP1/NP2"</li>
+<li>Always add anticipated OR date in comments</li>
+</ul>`},
+
+{ id:'t10-10', s:'s10', title:'Day of Surgery Tasks', summary:'Morning of surgery checklist — H&P update, consent, site marking, labs, anesthesia coordination', content:`
+<h3>Pre-Op Checklist — Day of Surgery</h3>
+<table>
+<tr><th>Task</th><th>Details</th></tr>
+<tr><td><strong>H&amp;P Update</strong></td><td>Done by attending on the same calendar date as the procedure. If H&amp;P &gt;30 days old, complete a full H&amp;P instead. Include changes since H&amp;P, exam pertinent to procedure, and procedure to be performed. Operating surgeon listed as cosigner.</td></tr>
+<tr><td><strong>Consent</strong></td><td>Ensure correct consent and attending of record are on file</td></tr>
+<tr><td><strong>Site Marking</strong></td><td>Confirm laterality and mark the correct surgical site with attending. For abdominal/pelvic cases, use a wrist band for marking. Attending must sign initials on the pre-op checklist.</td></tr>
+<tr><td><strong>Anesthesia</strong></td><td>Talk to anesthesia to confirm plan — general vs MAC, positioning, need for lines, laterality</td></tr>
+</table>
+
+<h3>Morning of Surgery — Labs</h3>
+<table>
+<tr><th>Lab</th><th>Ordered By</th><th>Indication</th></tr>
+<tr><td>PT/INR</td><td>Surgery</td><td>All patients on coumadin — day of surgery</td></tr>
+<tr><td>Type &amp; Screen (current)</td><td>Surgery</td><td>ALL cases except low bleeding risk list</td></tr>
+<tr><td>VBG</td><td>Anesthesia Pre-op Clinic</td><td>Patients on hemodialysis</td></tr>
+<tr><td>Pregnancy test</td><td>Anesthesia Pre-op Clinic</td><td>All females of reproductive age (&lt;52) within 7 days of intervention — unless menopause, prior tubal ligation, or hysterectomy; patient may sign waiver</td></tr>
+</table>
+<div class="tip-box">Surgery provides patient instructions on when to stop/restart anticoagulation and antiplatelet agents — document clearly in your note for anesthesia. Antihypertensive and diabetes medication holding instructions come from the anesthesia pre-op clinic.</div>`},
+
+{ id:'t10-11', s:'s10', title:'Gyn Low Bleeding Risk Cases', summary:'Gynecology procedures that do not require type and screen — pre-op labs valid for 6 months', content:`
+<div class="tip-box">For cases on this list: labs valid for 6 months (not 90 days), and <strong>Type &amp; Screen is NOT required</strong>.</div>
+<h3>Gynecology Low Bleeding Risk Procedures</h3>
+<ul>
+<li>Hysteroscopy of any sort — including ablation, polypectomy, or myomectomy</li>
+<li>Cystoscopy with or without Botox injections</li>
+<li>InterStim placement</li>
+<li>Urethral sling</li>
+<li>Anterior and posterior repairs</li>
+<li>Bartholin gland excision</li>
+<li>Exam under anesthesia</li>
+<li>Colposcopy</li>
+<li>LEEP or cold knife conization</li>
+<li>Laser ablation or resection of condyloma</li>
+<li>Labiaplasty</li>
+<li>Urethral diverticulectomy</li>
+<li>Vulvar/vaginal wide local excision</li>
+</ul>`},
+
+{ id:'t10-12', s:'s10', title:'Peri-op Medication Management', summary:'Anesthesia SOP for antihypertensives and diabetes medications around surgery', content:`
+<h3>Cardiovascular & Antihypertensives — Anesthesia SOP</h3>
+<table>
+<tr><th>Drug Class</th><th>Examples</th><th>Instruction</th></tr>
+<tr><td><strong>ACE Inhibitors / ARBs / Renin Inhibitors</strong></td><td>lisinopril, losartan, enalapril, valsartan, sacubitril-valsartan, aliskiren</td><td><strong>Hold 24 hours prior</strong> to procedure</td></tr>
+<tr><td><strong>Alpha Blockers</strong></td><td>doxazosin, terazosin, tamsulosin</td><td>Continue</td></tr>
+<tr><td><strong>Alpha-2 Agonists</strong></td><td>clonidine, methyldopa</td><td>Continue</td></tr>
+<tr><td><strong>Antiarrhythmics</strong></td><td>amiodarone, dronedarone, sotalol</td><td>Continue; obtain EKG prior to procedure</td></tr>
+<tr><td><strong>Beta-Blockers</strong></td><td>metoprolol, carvedilol, atenolol, bisoprolol</td><td>Continue</td></tr>
+<tr><td><strong>Calcium Channel Blockers</strong></td><td>amlodipine, nifedipine, diltiazem, verapamil</td><td>Continue; hold 24h if BP or HR too low</td></tr>
+<tr><td><strong>Diuretics</strong></td><td>furosemide, HCTZ, spironolactone, chlorthalidone</td><td><strong>Do not take day of procedure</strong>; continue in diuretic-dependent heart failure</td></tr>
+<tr><td><strong>Digoxin</strong></td><td>Digoxin</td><td>Continue; obtain digoxin level and Chem7 prior</td></tr>
+<tr><td><strong>Statins</strong></td><td>atorvastatin, pravastatin, rosuvastatin</td><td>Continue</td></tr>
+<tr><td><strong>Nitrates/Vasodilators</strong></td><td>isosorbide, hydralazine</td><td>Continue</td></tr>
+<tr><td><strong>Non-statin lipid agents</strong></td><td>ezetimibe, fenofibrate, fish oil</td><td>Hold day of procedure; hold fish oil 7 days prior</td></tr>
+<tr><td><strong>Potassium</strong></td><td>KCl</td><td>Hold day of procedure (unless on diuretic)</td></tr>
+</table>
+<div class="warn-box">Patients with uncontrolled hypertension, taking ≥3 antihypertensive medications, or taking antiarrhythmics should be evaluated by anesthesia pre-op clinic before surgery.</div>
+
+<h3>Diabetes Medications — NPO Instructions (Anesthesia SOP)</h3>
+<table>
+<tr><th>Medication</th><th>Instruction</th></tr>
+<tr><td><strong>NPH Insulin / 70/30</strong></td><td>Take ½ of usual NPH dose morning of procedure; restart usual dose when eating</td></tr>
+<tr><td><strong>Glargine (Lantus) / Detemir (Levemir)</strong></td><td>Continue usual dose even if not eating</td></tr>
+<tr><td><strong>Regular Insulin / Aspart / Lispro / Glulisine</strong></td><td>Hold if not eating; restart usual dose when eating resumes</td></tr>
+<tr><td><strong>Metformin</strong></td><td>Do not take day of procedure</td></tr>
+<tr><td><strong>Glipizide / Glyburide / Glimepiride</strong></td><td>Hold if not eating; restart when eating resumes</td></tr>
+<tr><td><strong>Pioglitazone</strong></td><td>Continue usual dose</td></tr>
+<tr><td><strong>Januvia / Onglyza / Tradjenta / Nesina (DPP-4 inhibitors)</strong></td><td>Hold if not eating; restart when eating resumes</td></tr>
+<tr><td><strong>SGLT-2 inhibitors (Farxiga, Invokana, Jardiance)</strong></td><td>Continue as directed</td></tr>
+<tr><td><strong>Acarbose</strong></td><td>Do not take day of procedure</td></tr>
+<tr><td><strong>GLP-1 agonists (Byetta, Victoza, Trulicity, Ozempic)</strong></td><td>Hold if not eating; restart when eating resumes</td></tr>
+<tr><td><strong>Insulin Pump</strong></td><td>Adjust to basal rate on day of procedure</td></tr>
+</table>
+<div class="tip-box">Check blood sugar every few hours while fasting. These instructions apply to fasting up to 24 hours — consult attending if NPO longer than 24 hours.</div>`},
 
 ]; // end TOPICS
 
